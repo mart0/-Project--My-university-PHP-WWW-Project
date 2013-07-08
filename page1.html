@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	<title>dalipeche.com</title>
+	<link rel="stylesheet" type="text/css" href="login.css"
+</head>
+<body>
+
+ 
+ <?php  require_once "database_config.php";?>
+	<div id="wrapper">
+		<header> 
+			
+			
+		</header>
+		<nav class="left clear">
+			<ul>
+				
+				<li><a href="weather.php">Main page</a></li>
+				<li><a href="login.html">Log in</a></li>
+				<li><a href="logout.php">Log out</a></li>
+			</ul>
+				
+			
+			</nav>
+
+		<div id="wrapper-content">
+		 	<section class="left clear">
+			 	<form id="myForm"  action="login.php" method="POST">
+					username: <input type="text" name="username" id="username" required="required"/><br />
+					password: <input type="password" name="password" id="password" required="required"/><br />
+					<button id="submit">Login</button>
+				</form>
+				<!-- <div id="ack"></div>	 -->
+		 	</section>
+
+		 
+		 </div>
+		 <footer>
+
+		 </footer>
+
+	</div>
+</body>
+
+ 
+<div id="ack"></div>
+ 
+<script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="script/my_script.js"></script>
+</body>
+</html>

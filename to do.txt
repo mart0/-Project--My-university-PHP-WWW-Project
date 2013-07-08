@@ -1,0 +1,7 @@
+1) da ima vruzki vuv vsi4ki menuta (zasega s linkove, psle s AJAX)
+2) sesiq za potrebitelite
+3) stilizirane na employee formata i na today v weather.php
+
+4) canvas
+5) не с класове а с пропърти data za weather.php
+6)валидация на входни даннни и достъп до страници 

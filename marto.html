@@ -1,0 +1,637 @@
+<!-- Sofia Forecast --><!-- 
+				<div id="sofia_forecast">
+					<nav>
+						<ul>
+							<li id="1" class="1"> Today in Sofia</li>
+							<li id="2" class="2"> Next 24 hours</li>
+							<li id="sofia_5day" class="3"> Next 5 days</li>
+						</ul>
+					</nav>
+				<div id="sofia_today_field">
+						<form action="">
+							<label for="date_new">Date: </label>
+							<input type="date" class="date_new" value="" placeholder="DD/MM/YYYY" required="required" min="1" max="2014"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					<canvas>sapod</canvas>
+				</div>
+				<div id="sofia_24_field">
+					<div class="hour_1">
+						<p>+2</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_2">
+						<p>+4</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_3">
+						<p>+6</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_4">
+						<p>+8</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_5">
+						<p>+10</p>					
+						<button type="button" class="forward">"Forward"</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+12</p><button class="back">Back</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+14</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+16</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+18</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+20</p><button type="button" class="forward1">Forward</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields2">
+						<p>+22</p><button class="back1">Back</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields2">
+						<p>+24</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+				</div>
+				<div id="sofia_5day_field">
+					<div class="hour_1">
+						<p>+1</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_2">
+						<p>+2</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_3">
+						<p>+3</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_4">
+						<p>+4</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_5">
+						<p>+5</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+				</div>	
+				</div>-->
+				<!-- Plovdiv Forecast 
+				<div id="plovdiv_forecast">
+					<nav>
+						<ul>
+							<li id="plovdiv_today"> Today in Plovdiv</li>
+							<li id="plovdiv_24"> Next 24 hours</li>
+							<li id="plovdiv_5day"> Next 5 days</li>
+						</ul>
+					</nav>
+				<div id="plovdiv_today_field">
+						<form action="">
+							<label for="date_new">Date: </label>
+							<input type="date" class="date_new" value="" placeholder="DD/MM/YYYY" required="required" min="1" max="2014"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					<canvas>sapod</canvas>
+				</div>
+				<div id="plovdiv_24_field">
+					<div class="hour_1">
+						<p>+2</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_2">
+						<p>+4</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_3">
+						<p>+6</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_4">
+						<p>+8</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_5">
+						<p>+10</p>					
+						<button type="button" class="forward">"Forward"</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+12</p><button class="back">Back</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+14</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+16</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+18</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+20</p><button type="button" class="forward1">Forward</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields2">
+						<p>+22</p><button class="back1">Back</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields2">
+						<p>+24</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+				</div>
+				<div id="plovdiv_5day_field">
+					<div class="hour_1">
+						<p>+1</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_2">
+						<p>+2</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_3">
+						<p>+3</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_4">
+						<p>+4</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_5">
+						<p>+5</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+				</div>	
+				</div> -->
+				<!-- Stara Zagora Forecast -->
+				<!-- <div id="stara_zagora_forecast">
+					<nav>
+						<ul>
+							<li id="stara_zagora_today"> Today in Stara Zagora</li>
+							<li id="stara_zagora_24"> Next 24 hours</li>
+							<li id="stara_zagora_5day"> Next 5 days</li>
+						</ul>
+					</nav>
+				<div id="stara_zagora_today_field">
+						<form action="">
+							<label for="date_new">Date: </label>
+							<input type="date" class="date_new" value="" placeholder="DD/MM/YYYY" required="required" min="1" max="2014"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					<canvas>sapod</canvas>
+				</div>
+				<div id="stara_zagora_24_field">
+					<div class="hour_1">
+						<p>+2</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_2">
+						<p>+4</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_3">
+						<p>+6</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_4">
+						<p>+8</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_5">
+						<p>+10</p>					
+						<button type="button" class="forward">"Forward"</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+12</p><button class="back">Back</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+14</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+16</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+18</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields1">
+						<p>+20</p><button type="button" class="forward1">Forward</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields2">
+						<p>+22</p><button class="back1">Back</button>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hidden_fields2">
+						<p>+24</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+				</div>
+				<div id="stara_zagora_5day_field">
+					<div class="hour_1">
+						<p>+1</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_2">
+						<p>+2</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_3">
+						<p>+3</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_4">
+						<p>+4</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required" ><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form>
+					</div>
+					<div class="hour_5">
+						<p>+5</p>
+						<form action="">
+							<label for="hour_new">Date: </label>
+							<input type="date" min="1" max="2014" class="hour_new" required="required"><br/><br/><br/>
+							<label for="temperature_new" >Temperature: </label>
+							<input type="text" class="temperature_new" value="" placeholder="&#x2103;" required="required"><br/><br/><br/>
+							<label for="humidity_new">Humidity: </label>
+							<input type="text" class="humidity_new" value="" placeholder="%" required="required">
+						</form> 
+					</div>-->

@@ -1,0 +1,76 @@
+section {
+	width: 860px;
+	margin-top: 100px;
+	padding: 50px ;
+}
+
+#employee_name, #employee_location {
+	width: 350px;
+	display: inline-block;
+	margin-left: 50px;
+	margin-bottom: 30px;
+}
+form {
+	padding: 10px;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.8);
+	
+}
+
+#button_bar button {
+	border:1px solid;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#button_bar {
+	padding-left: 113px;
+}
+
+select option {
+	width: 150px;
+    height: 20px;
+}
+p {
+	font-size: 20px;
+	text-align: center;
+}
+
+select {
+	margin-left: 100px;
+	border:1px solid;
+	border-radius: 5px;
+	background: rgb(226,226,226); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(254,254,254,1) 50%, rgba(219,219,219,1) 54%, rgba(219,219,219,1) 68%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(254,254,254,1)), color-stop(54%,rgba(219,219,219,1)), color-stop(68%,rgba(219,219,219,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(254,254,254,1) 50%,rgba(219,219,219,1) 54%,rgba(219,219,219,1) 68%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(254,254,254,1) 50%,rgba(219,219,219,1) 54%,rgba(219,219,219,1) 68%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(254,254,254,1) 50%,rgba(219,219,219,1) 54%,rgba(219,219,219,1) 68%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(226,226,226,1) 0%,rgba(254,254,254,1) 50%,rgba(219,219,219,1) 54%,rgba(219,219,219,1) 68%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+}
+
+#enter_data input {
+	width: 300px;
+	margin-top: 20px;
+	disabled: disabled;
+
+}
+
+#emp_submit {
+	margin: 17px 0 0 330px;
+	border:1px solid;
+	border-radius: 3px;
+}
+#admin_submit {
+	margin: 17px 0 0 330px;
+	border:1px solid;
+	border-radius: 3px;
+}
+
+#loc_submit {
+	margin: 17px 0 0 350px;
+	border:1px solid;
+	border-radius: 3px;
+}
+}

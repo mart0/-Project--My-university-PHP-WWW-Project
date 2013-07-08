@@ -1,0 +1,112 @@
+section {
+	width: 860px;
+	margin-top: 100px;
+	padding: 50px ;
+}
+
+#employee_name, #employee_location {
+	width: 350px;
+	display: inline-block;
+	margin-left: 50px;
+	margin-bottom: 30px;
+}
+
+button:hover {
+	background: rgb(219, 219, 219); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(219, 219, 219,1) 0%, rgba(218, 218, 218,1) 0%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(219, 219, 219,1)), color-stop(0%,rgba(218, 218, 218,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(219, 219, 219,1) 0%,rgba(218, 218, 218,1) 0%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(219, 219, 219,1) 0%,rgba(218, 218, 218,1) 0%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(219, 219, 219,1) 0%,rgba(218, 218, 218,1) 0%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(219, 219, 219,1) 0%,rgba(218, 218, 218,1) 0%); /* W3C */
+}
+
+form {
+	display: inline-block;
+	padding: 10px;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.5);
+}
+
+#button_bar button {
+	border:1px solid;
+	border-radius: 5px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#button_bar {
+	padding-left: 113px;
+}
+
+select option {
+	width: 150px;
+    height: 20px;
+}
+p {
+	font-size: 20px;
+	text-align: center;
+}
+
+#employee_location p {
+	margin-left: 48px;
+}
+
+#employee_name p {
+	margin-right: 120px;
+}
+
+select {
+	width: 180px;
+	margin-left: 64px;
+	border-radius: 5px;
+	background: rgb(226,226,226); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(254,254,254,1) 50%, rgba(219,219,219,1) 54%, rgba(219,219,219,1) 68%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(226,226,226,1)), color-stop(50%,rgba(254,254,254,1)), color-stop(54%,rgba(219,219,219,1)), color-stop(68%,rgba(219,219,219,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(254,254,254,1) 50%,rgba(219,219,219,1) 54%,rgba(219,219,219,1) 68%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(254,254,254,1) 50%,rgba(219,219,219,1) 54%,rgba(219,219,219,1) 68%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(226,226,226,1) 0%,rgba(254,254,254,1) 50%,rgba(219,219,219,1) 54%,rgba(219,219,219,1) 68%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(226,226,226,1) 0%,rgba(254,254,254,1) 50%,rgba(219,219,219,1) 54%,rgba(219,219,219,1) 68%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+	border: 1px solid gray;
+}
+
+.enter_data input {
+	width: 300px;
+	margin-top: 20px;
+	-o-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px solid gray;
+}
+
+#emp_submit {
+	margin: 17px 0 0 330px;
+	border:1px solid;
+	border-radius: 3px;
+}
+#admin_submit {
+	margin: 17px 0 0 350px;
+	border:1px solid;
+	border-radius: 3px;
+}
+
+#loc_submit {
+	margin: 17px 0 0 250px;
+	border:1px solid;
+	border-radius: 3px;
+}
+#location_form {
+	width: 300px;
+	position: relative;
+	top: 10px;
+	display: none;
+	float: right;
+}
+#employee_form {
+	width: 450px;
+	margin-top: 10px;
+	display: none;
+	float: left;
+}

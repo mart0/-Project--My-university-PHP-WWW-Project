@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	<title>dalipeche.com</title>
+	<link rel="stylesheet" type="text/css" href="login.css"
+</head>
+<body>
+
+
+	<?php  require_once "database_config.php";?>
+	<div id="wrapper">
+		<header> 
+			<h1>Weather Center</h1>
+		</header>
+		<nav class="left clear">
+			<ul>
+				<li><a href="weather.php">Main page</a></li>
+			</ul>	
+		</nav>
+
+		<div id="wrapper-content">
+			<section class="left clear">
+				<form id="myForm" action="login.php" method="POST">
+					<label for="username">
+						Username:
+					</label><input type="text" name="username" id="username" required="required"/><br />
+					<label for="password">
+						Password:
+					</label><input type="password" name="password" id="password" required="required"/><br /><br />
+					<button id="submit">Login</button>
+				</form>
+			</section>
+		</div>
+		<footer>
+			<p>Designed by <a href="http://martomarinov.wordpress.com/">Martin Marinov</a> and <a href="http://bg.linkedin.com/pub/gergana-atanasova/72/2b4/165/">Gergana Atanasova</a>, Copyright &#169; 2013. All rights reserved.</p>
+		</footer>
+	</div>
+</body>
+
+
+<div id="ack"></div>
+
+<script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="script/my_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+body, div, ul, li , a {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	  background-image: url("img/bg.jpg");
+	  background-position: center;
+	  background-repeat:  no-repeat ; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  font-family: Arial, Verdana, Serif;
+}
+#wrapper {
+	margin: 50px auto;
+	width: 960px;
+	height: 1000px;
+	background: transparent;
+}
+
+
+/*------------ Header and navigation--------------*/
+
+header {
+	width: 960px;
+	height: 45px;
+}
+
+nav {
+	width:960px;
+	padding-top: 10px;
+	font-size: 20px;
+	color: #000;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 10px 10px 0 0;
+}
+
+nav li{
+	display: inline;
+	padding: 5px;
+}
+
+nav a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav li:hover {
+	background: rgb(30,87,153); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	color:#222;
+	border-radius: 10px;
+}
+.register{
+	width: auto;
+	height: 45px;
+	font-size: 20px;
+}
+
+.register li{
+	display: inline;
+	padding: 5px;
+}
+
+/*------------ Actual content--------------*/
+#wrapper-content {
+	width:960px;
+	height:550px;
+}
+section {
+	width: 960px;
+	height: 500px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: rgba(255,255,255,0.7);
+	border-right: #f5f5f5 1px solid ;
+}
+
+aside {
+	width: 300px;
+	height: 500px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: rgba(230,230,250,0.7);
+}
+
+.aside_header {
+	margin:10px 0  ;
+	padding: 10px;
+	font-size: 20px;
+	background-color: #FFFFF5;
+	text-align: center;
+}
+
+
+
+/*------------ Footer --------------*/
+footer {
+	width: 960px;
+	height: 45px;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 0 0 10px 10px;
+}
+
+
+/*------------ Floats and clear--------------*/
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	min-height:0;
+	zoom:1;
+}
+.clear:after {
+	content:"";
+	clear:both;
+	display:inline-block;
+}
+
+#city {
+	width: 300px;
+	height: 40px;
+	font-size: 30px;
+	border-radius: 7px;
+	border: 1px solid gray;
+	margin: 10px;
+	background: rgb(195,217,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(195,217,255,1) 0%, rgba(177,200,239,1) 41%, rgba(195,217,255,1) 55%, rgba(152,176,217,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(195,217,255,1)), color-stop(41%,rgba(177,200,239,1)), color-stop(55%,rgba(195,217,255,1)), color-stop(100%,rgba(152,176,217,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(195,217,255,1) 0%,rgba(177,200,239,1) 41%,rgba(195,217,255,1) 55%,rgba(152,176,217,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(195,217,255,1) 0%,rgba(177,200,239,1) 41%,rgba(195,217,255,1) 55%,rgba(152,176,217,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(195,217,255,1) 0%,rgba(177,200,239,1) 41%,rgba(195,217,255,1) 55%,rgba(152,176,217,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(195,217,255,1) 0%,rgba(177,200,239,1) 41%,rgba(195,217,255,1) 55%,rgba(152,176,217,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d9ff', endColorstr='#98b0d9',GradientType=0 ); /* IE6-9 */
+}
+
+#sofia_today_field {
+    height: 343px;
+    margin-left: 144px;
+    width: 280px;
+    margin-top: 30px;
+    display: none;
+}
+
+#sofia_24_field, #sofia_5day_field {
+    height: 343px;
+    margin-left: 14px;
+    width: 280px;
+    margin-top: 30px;
+    display: none;
+}
+
+
+
+/*
+#sofia_24_pic {
+	border: 1px solid gray;
+	background: url('img/sofia_hourly.png') no-repeat center;
+    height: 215px;
+    margin-left: 144px;
+    width: 607px;
+    margin-top: 30px;
+    display: none;
+}
+
+#sofia_5day_pic {
+	border: 1px solid gray;
+	background: url('img/sofia_five_day.png') no-repeat center;
+    height: 319px;
+    margin-left: 144px;
+    width: 534px;
+    margin-top: 30px;
+    display: none;
+}
+=
+#plovdiv_today_pic {
+	border: 1px solid gray;
+	background: url('img/plovdiv_today.png') no-repeat center;
+    height: 343px;
+    margin-left: 144px;
+    width: 285px;
+    margin-top: 30px;
+    display: none;
+}
+
+#plovdiv_24_pic {
+	border: 1px solid gray;
+	background: url('img/plovdiv_hourly.png') no-repeat center;
+    height: 243px;
+    margin-left: 144px;
+    width: 594px;
+    margin-top: 30px;
+    display: none;
+}
+
+#plovdiv_5day_pic {
+	border: 1px solid gray;
+	background: url('img/plovdiv_five_day.png') no-repeat center;
+    height: 314px;
+    margin-left: 144px;
+    width: 600px;
+    margin-top: 30px;
+    display: none;
+}
+
+#stara_zagora_today_pic {
+	border: 1px solid gray;
+	background: url('img/stara_zagora_today.png') no-repeat center;
+    height: 338px;
+    margin-left: 144px;
+    width: 285px;
+    margin-top: 30px;
+    display: none;
+}
+
+#stara_zagora_24_pic {
+	border: 1px solid gray;
+	background: url('img/stara_zagora_hourly.png') no-repeat center;
+    height: 246px;
+    margin-left: 144px;
+    width: 593px;
+    margin-top: 30px;
+    display: none;
+}
+
+#stara_zagora_5day_pic {
+	border: 1px solid gray;
+	background: url('img/stara_zagora_five_day.png') no-repeat center;
+    height: 316px;
+    margin-left: 144px;
+    width: 604px;
+    margin-top: 30px;
+    display: none;
+} */
+
+#sofia_forecast nav {
+	display: none;
+	cursor: pointer;
+}
+
+#plovdiv_forecast nav {
+	display: none;
+	cursor: pointer;
+}
+
+#stara_zagora_forecast nav {
+	display: none;
+	cursor: pointer;
+}
+
+.date_new, .temperature_new, .humidity_new, .hour_new {
+	width: 141px;
+	height: 20px;
+	border-radius: 3px;
+	font-size: 12px;
+	border: 1px solid gray;
+	float: right;
+}
+
+#sofia_today_field, #sofia_24_field label {
+	font-size: 20px;
+}
+ 
+
+p {
+ 	font-size: 30px;
+ 	margin-left: 60px;
+ }
+
+ .hour_1, .hour_2, .hour_3, .hour_4, .hour_5, .hidden_fields1, .hidden_fields2 {
+ 	display: table-cell;
+ 	padding: 21px;
+ }
+
+ .hour_1, .hour_3, .hour_5, .hidden_fields1, .hidden_fields2 {
+ 	border-left: 1px dotted gray;
+ 	border-right: 1px dotted gray;
+ }
+
+ .hidden_fields1, .hidden_fields2 {
+ 	display: none;
+ }
+
+ .hour_5 button, .hidden_fields1 button {
+ 	float: right;
+ 	margin-top: -109px;
+ }
+
+ .back {
+ 	float: left;
+ 	margin-top: -109px;
+ }

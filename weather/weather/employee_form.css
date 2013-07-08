@@ -1,0 +1,40 @@
+label {
+	float: left;
+}
+
+input {
+	float: right;
+}
+
+#enter_data {
+	height: 150px;
+    width: 360px;
+}
+
+#emp_submit {
+	margin: 0px; 	
+	float: right;
+}
+
+select {
+	float: right;
+	width: 142px;
+	height: 20px;
+}
+
+input {
+	border-radius: 2px;
+	border:1px solid gray;
+}
+
+button:hover {
+	background: rgb(219, 219, 219); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(219, 219, 219,1) 0%, rgba(218, 218, 218,1) 0%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(219, 219, 219,1)), color-stop(0%,rgba(218, 218, 218,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(219, 219, 219,1) 0%,rgba(218, 218, 218,1) 0%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(219, 219, 219,1) 0%,rgba(218, 218, 218,1) 0%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(219, 219, 219,1) 0%,rgba(218, 218, 218,1) 0%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(219, 219, 219,1) 0%,rgba(218, 218, 218,1) 0%); /* W3C */
+}
+
+
