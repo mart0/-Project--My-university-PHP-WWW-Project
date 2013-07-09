@@ -17,17 +17,17 @@
 			 exit;
 	}
 
-	$query="SELECT `weather_date`, `weather_hour`
-			 FROM `weather_data`
-			 WHERE `location_id_location`='$ID' AND `weather_date`='$today' 
-			 ORDER BY `weather_hour` ASC";
+	// $query="SELECT `weather_date`, `weather_hour`
+	// 		 FROM `weather_data`
+	// 		 WHERE `location_id_location`='$ID' AND `weather_date`='$today' 
+	// 		 ORDER BY `weather_hour` ASC";
 
 
-	$res1 = $mysqli->query($query)or die($mysqli->error);
-		 if (!$res) {
-			 echo 'Could not run query: ' ;
-			 exit;
-	}
+	// $res1 = $mysqli->query($query)or die($mysqli->error);
+	// 	 if (!$res) {
+	// 		 echo 'Could not run query: ' ;
+	// 		 exit;
+	// }
 
 	$json=array('date'      => $today, 
 				'temp' 		=> array(0 => null ,1 => null, 2=> null,3 => null,4 => null,5 => null, 6 => null, 7 => null, 8 => null,
@@ -40,19 +40,27 @@
 									 9 => 0, 10 => 0, 11 => 0 ));
 
 	$i=0;
-	while(($row = mysqli_fetch_row($res)) != null && ($row1 = mysqli_fetch_row($res1)) != null ){
-		
+	while(($row = mysqli_fetch_row($res)) != null ){
 		$json['temp'][$i]=$row[1];
 		$json['humidity'][$i]=$row[2];
 		$json['image_id'][$i]=$row[4];
-		$json['hour'][$i]=$row1[1];
+		$json['hour'][$i]=$row[3];
 		// if($i==5 ||  $i==6){
 		// 	$json['temp'][$i]=null;
 		// }
 		++$i;
-
-	
-
 	}
+	// $i=0;
+	// $hours=array();
+	// while($i<12){
+	// 	if(($json['hour'][$i+1]-$json['hour'][$i])>2){
+	// 		$hours[]=$json['hour'][$i];
+	// 		$hours[]=0;
+			
+	// 	}else{
+	// 		$hours[]=$json['hour'][$i];
+	// 	}
+	// }
+
 	echo json_encode($json);
 	
