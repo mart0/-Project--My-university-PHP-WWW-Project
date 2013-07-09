@@ -184,7 +184,7 @@ section {
     display: none;
 }
 
-#field_24, #field_5day {
+#field_24, #field_5day, #field_3day {
     height: 343px;
     margin-top: 30px;
     display: inline;
@@ -252,7 +252,7 @@ p {
  	display: none;
  }*/
 
-#tempgraph, #humgraph, #fiveday_chart{
+#tempgraph, #humgraph, #fiveday_chart, #threeday_chart{
 	width:800px !important;
 	height: 260px !important;
 	font-size: 12px !important;

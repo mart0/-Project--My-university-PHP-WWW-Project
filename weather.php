@@ -24,6 +24,7 @@
 						<ul>
 							<li id="today" > Today </li>
 							<li id="24_hour"> Next 24 hours</li>
+							<li id="3_days"> Next 3 days</li>
 							<li id="5_days" > Next 5 days</li>
 							<li id="graphics" >Graphics</li>
 						</ul>
@@ -47,6 +48,7 @@
 				<canvas id="tempgraph" width="800px" height="260px"></canvas>
 				<canvas id="humgraph" width="800px" height="260px"></canvas>
 				<canvas id="fiveday_chart" width="800px" height="260px"></canvas>
+				<canvas id="threeday_chart" width="800px" height="260px"></canvas>
 				<div id="result"> 
 					<img src="" id="today_image"><br/>
 					<label for="date">Date:</label>
@@ -229,6 +231,35 @@
 						<span class="temperature_4"></span> <br/>
 						<label for="humidity">Humidity: </label>
 						<span class="humidity_4"></span>
+					</div>
+				</div>
+				<div id="field_3day">
+					<div id="day_date_0">
+						<img src="" class="image">
+						<label for="date">Date:</label>
+				    	<span class="date_0"></span> <br/>
+						<label for="temperature" >Temperature: </label>
+						<span class="temperature_0"></span> <br/>
+						<label for="humidity">Humidity: </label>
+						<span class="humidity_0"></span>
+					</div>
+					<div id="day_date_1">
+						<img src="" class="image">
+						<label for="date">Date:</label>
+				    	<span class="date_1"></span> <br/>
+						<label for="temperature" >Temperature: </label>
+						<span class="temperature_1"></span> <br/>
+						<label for="humidity">Humidity: </label>
+						<span class="humidity_1"></span>
+					</div>
+					<div id="day_date_2">
+						<img src="" class="image">
+						<label for="date">Date:</label>
+				    	<span class="date_2" data-id></span> <br/>
+						<label for="temperature" >Temperature: </label>
+						<span class="temperature_2"></span> <br/>
+						<label for="humidity">Humidity: </label>
+						<span class="humidity_2"></span>
 					</div>
 				</div>
 			</section>

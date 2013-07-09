@@ -111,7 +111,7 @@ $(document).ready(function () {
 				console.log(data);
 				/*$('#warning').show('fast');*/
 				$('#warning').text("Proccesing...");
-<
+
 				if(data==true){
 					$('#warning').text("Yep success");
 					$('#warning').show("fast").delay(2000).hide("slow");
@@ -148,6 +148,5 @@ $(document).ready(function () {
 		$("#delete_day_data").hide("fast");	
 		$("#update_data").show("slow");	
 		$("#update_day_data").show("slow");	 
-
 	});
 });
