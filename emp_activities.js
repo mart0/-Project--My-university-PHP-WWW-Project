@@ -20,6 +20,11 @@ $(document).ready(function () {
 });
 	});
 
+
+
+
+	
+
 	$('#emp_submit').click(function() {	
 		$.ajax({
 			type: "POST",
