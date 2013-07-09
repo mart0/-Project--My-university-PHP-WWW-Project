@@ -136,9 +136,10 @@ var data1 = new Array();
 	 	context.moveTo(hum1_x,hum1_y);
 	 	context.lineTo((canvasWidth/12)*counter + 15,canvasTopBuffer + (-(humidities[counter]+minHum))*pixPerCelcius + temperatureRadius);
 	 	context.stroke();
-	 	console.log(data1);
+	 	
+	}
+	console.log(data1);
 	 	return data1;
-	};
 }
 
 
@@ -180,6 +181,26 @@ $(document).ready(function(){
 
 				});
 			});
+			$('.forward').on('click', function () {
+     			$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').hide("fast");
+     			$('.hidden_fields2').hide("fast");
+				$('.hidden_fields1').show("slow").css("display", "table-cell");
+    		});
+    		$('.forward1').on('click', function () {
+    			$('.hidden_fields1').hide("fast");
+    			$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').hide("fast");
+				$('.hidden_fields2').show("slow").css("display", "table-cell");
+			});
+			$('.back').on('click', function () {
+    			$('.hidden_fields1').hide("fast");
+    			$('.hidden_fields2').hide("fast");
+				$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').show("slow").css("display", "table-cell");	
+			});
+			$('.back1').on('click', function () {
+    			$('.hidden_fields2').hide("fast");
+    			$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').hide("fast");
+				$('.hidden_fields1').css("display", "table-cell").show("slow");
+			});
 
 			$('#24_hour').on('click',function(){
 				var $id = $('#location').children(":selected").attr("id");
@@ -194,12 +215,121 @@ $(document).ready(function(){
 					dataType: 'json',
 					success: function(info){
 						console.log(info);
-						var i=0;
-						$.each(info.hour, function() { 
-							if(info.date!=0 && info.temp[i]!=0 && info.humidity[i]!=0 && info.image_id[i]!=0){
-								$('#field_24').show("fast");
-								var img=parseInt(info.image_id[i]);
-								console.log(img);
+						
+						var temps=[NaN,NaN, NaN, NaN, NaN,NaN, NaN, NaN,NaN,NaN,NaN,NaN];
+						var hums=[NaN,NaN, NaN, NaN, NaN,NaN, NaN, NaN,NaN,NaN,NaN,NaN];
+						var images=[NaN,NaN, NaN, NaN, NaN,NaN, NaN, NaN,NaN,NaN,NaN,NaN];
+						var hours=[NaN,NaN, NaN, NaN, NaN,NaN, NaN, NaN,NaN,NaN,NaN,NaN];
+						//console.log("info humidities:"+humidities)
+						for(var k=0; k<info.hour.length;){
+						//console.log(k);
+						switch(parseInt(info.hour[k]))
+							{
+							case 2:
+							//console.log(info.hour[k]);
+							  temps[0]=info.temp[k];
+							  images[0]=info.image_id[k];
+							  hours[0]=info.hour[k];
+							  //console.log("temp0:"+temps[0]);
+							  hums[0]=info.humidity[k];
+							  //k++;
+							  break;
+							case 4:
+							  temps[1]=info.temp[k];
+							  images[1]=info.image_id[k];
+							  hours[1]=info.hour[k];
+							 // console.log(info.hour[k]);
+							 // console.log("temp1:"+temps[1]);
+							  hums[1]=info.humidity[k];
+							  //k++;
+							  break;
+							case 6:
+							//console.log(info.hour[k]);
+							 temps[2]=info.temp[k];
+							 images[2]=info.image_id[k];
+							  hours[2]=info.hour[k];
+							 //console.log("temp2:"+temps[2]);
+							 hums[2]=info.humidity[k];
+							 //k++;
+							  break;
+							case 8:
+							  temps[3]=info.temp[k];
+							  images[3]=info.image_id[k];
+							  hours[3]=info.hour[k];
+							  //console.log("temp3:"+temps[3]);
+							  hums[3]=info.humidity[k];
+							 // k++;
+							  break;
+							 case 10:
+							  temps[4]=info.temp[k];
+							  images[4]=info.image_id[k];
+							  hours[4]=info.hour[k];
+							  console.log("temp4 :"+temps[4]);
+							  hums[4]=info.humidity[k];
+							  //k++;
+							 break;
+							 case 12:
+							  temps[5]=info.temp[k];
+							  images[5]=info.image_id[k];
+							  hours[5]=info.hour[k];
+							  console.log("temp5 :"+temps[5]);
+							  hums[5]=info.humidity[k];
+							 // k++;
+							 break;
+							 case 14:
+							 images[6]=info.image_id[k];
+							  hours[6]=info.hour[k];
+							  temps[6]=info.temp[k];
+							  hums[6]=info.humidity[k];
+							 // k++;
+							 break;
+							 case 16:
+							 images[7]=info.image_id[k];
+							  hours[7]=info.hour[k];
+							  temps[7]=info.temp[k];
+							  hums[7]=info.humidity[k];
+							  //k++;
+							 break;
+							 case 18:
+							 images[8]=info.image_id[k];
+							  hours[8]=info.hour[k];
+							  temps[8]=info.temp[k];
+							  hums[8]=info.humidity[k];
+							 // k++;
+							 break;
+							 case 20:
+							 images[9]=info.image_id[k];
+							  hours[9]=info.hour[k];
+							  temps[9]=info.temp[k];
+							  hums[9]=info.humidity[k];
+							 // k++;
+							 break;
+							 case 22:
+							 images[10]=info.image_id[k];
+							  hours[10]=info.hour[k];
+							  temps[10]=info.temp[k];
+							  hums[10]=info.humidity[k];
+							  //k++;
+							 break;
+							  case 24:
+							  images[11]=info.image_id[k];
+							  hours[11]=info.hour[k];
+							  temps[11]=info.temp[k];
+							  hums[11]=info.humidity[k];
+							 // k++;
+							 break;
+							}
+							k++;
+					}
+							console.log("Array temps end if switch:"+temps);
+							console.log("Array hums end if switch:"+hums);
+							console.log(k);
+						//$.each(info.hour, function() 
+						for (var i=0;i<12;i++){ 
+							if(info.date!=0 && temps[i]!=NaN && hums[i]!=NaN && images[i]!=NaN && hours[i]!=NaN){
+								
+								var img=parseInt(images[i]);
+								//console.log(info.temp[i]);
 								switch(img)
 								{
 								case 1:
@@ -213,19 +343,26 @@ $(document).ready(function(){
 								  break;
 								}
 									$('#field_24').find('.date').text(info.date);
-									$('#field_24').find('.h_'+i).text(info.hour[i]);
-									$('#field_24').find('.temperature_'+i).text(info.temp[i]);
-									$('#field_24').find('.humidity_'+i).text(info.humidity[i]);
+									$('#field_24').find('.h_'+i).text(hours[i]);
+									$('#field_24').find('.temperature_'+i).text(temps[i]);
+									$('#field_24').find('.humidity_'+i).text(hums[i]);
 									$('#field_24').find('.hour_'+i).show('fast');
+									$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').show('fast');
+									$('.hidden_fields1, .hidden_fields2').hide("fast");
 							
 							}else{
-							
-								$('#field_24').find('.hour_'+i).hide('fast');
-								
+								$('#field_24').find('.date').text('no info');
+									//$('#field_24').find('.h_'+i).text('no info');
+									$('#field_24').find('.temperature_'+i).text('no info');
+									$('#field_24').find('.humidity_'+i).text('no info');
+								//$('#field_24').find('.hour_'+i).hide('fast');
+								//$('#field_24').find('.hour_'+i).css('display', 'none');
 								
 							}
-							++i;
-						});
+						}
+							//++i;
+						//});
+						$('#field_24').show("fast");
 						//alert("info");
 					}
 
@@ -291,26 +428,7 @@ $(document).ready(function(){
 					
 				});
 			});
-			$('.forward').on('click', function () {
-     			$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').hide("fast");
-     			$('.hidden_fields2').hide("fast");
-				$('.hidden_fields1').show("slow").css("display", "table-cell");
-    		});
-    		$('.forward1').on('click', function () {
-    			$('.hidden_fields1').hide("fast");
-    			$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').hide("fast");
-				$('.hidden_fields2').show("slow").css("display", "table-cell");
-			});
-			$('.back').on('click', function () {
-    			$('.hidden_fields1').hide("fast");
-    			$('.hidden_fields2').hide("fast");
-				$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').show("slow").css("display", "table-cell");	
-			});
-			$('.back1').on('click', function () {
-    			$('.hidden_fields2').hide("fast");
-    			$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').hide("fast");
-				$('.hidden_fields1').show("slow").css("display", "table-cell");
-			});
+			
 
 			$('#graphics').on('click',function(){
 				$('#result').hide("fast");
@@ -425,7 +543,7 @@ $(document).ready(function(){
 							console.log(k);
 							
 						//var array_temp=new Array();
-
+						console.log("hums : "+drawhumidities(hums));
 						var data1 = {
 							labels : ["2:00","4:00","6:00","8:00","10:00","12:00","14:00","16:00","18:00","20:00","22:00","24:00"],
 							datasets : [
@@ -448,7 +566,7 @@ $(document).ready(function(){
 									strokeColor : "rgba(220,220,220,1)",
 									pointColor : "rgba(220,220,220,1)",
 									pointStrokeColor : "#fff",
-									data : hums
+									data : drawhumidities(hums)
 								},
 								
 							]

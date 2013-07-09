@@ -14,6 +14,7 @@ if(!empty($_POST)){
         echo false;
         //exit();
       }
+  }
 	$result = $mysqli->query("INSERT INTO `employee_has_location` (`location_id_location`, `employee_id_emp`, `start_date`, `final_date`) 
 							  VALUES ('$loc_id','$emp_id','$start_date','$final_date')") 
     or die($mysqli->error);
