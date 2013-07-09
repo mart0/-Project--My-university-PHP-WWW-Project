@@ -7,7 +7,7 @@ html{
 	height: auto;
 }
 body {
-	min-height: 400px;
+	height: auto;
 	background-image: url("images/bg.jpg");
 	background-position: center;
 	background-repeat:  no-repeat ; 
@@ -92,7 +92,7 @@ nav li:hover, #options li:hover {
 }
 section {
 	width: 960px;
-	min-height: fit-content;
+	height: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-color: rgba(255,255,255,0.7);
@@ -125,13 +125,23 @@ section {
 }
 
 #result {
+	width: 400px;
+	height: auto;
 	background-color: rgba(255,255,255,0.5);
 	font-size: 20px;
     margin: 30px auto;
     padding: 30px;
-    width: 180px;
 	display: none;
 
+}
+
+#result img {
+	width: 200px;
+	height: 200px;
+	float:left;
+}
+#result label, span{
+	float: right;
 }
 .hour_data{
 	background-color: rgba(255,255,255,0.7);
@@ -184,13 +194,19 @@ section {
     display: none;
 }
 
-#field_24, #field_5day {
-    height: 343px;
+#field_24, #field_5day, #field_10days {
+    height: 345px;
     margin-top: 30px;
     display: inline;
     display: none;
 }
 
+#field_10days div{
+	width: 150px;
+	padding: 15px;
+	display: inline-table;
+
+}
 #day_date_0,#day_date_1,#day_date_2,#day_date_3,#day_date_4 {
 	width:150px;
 	padding: 12px;

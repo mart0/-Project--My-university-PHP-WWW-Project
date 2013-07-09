@@ -111,7 +111,6 @@ $(document).ready(function () {
 				console.log(data);
 				/*$('#warning').show('fast');*/
 				$('#warning').text("Proccesing...");
-<
 				if(data==true){
 					$('#warning').text("Yep success");
 					$('#warning').show("fast").delay(2000).hide("slow");
