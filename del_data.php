@@ -10,10 +10,6 @@
                 WHERE location_id_location='$loc_id '
                 AND `weather_hour`='$hours' 
                 AND weather_date='$date'";
-        // $query="SELECT  `id_location`, `day_date`
-        //         FROM weather_day_data 
-        //         WHERE day_date='$date'
-        //         AND id_location='$loc_id'";
         $res = $mysqli->query($query)or die($mysqli->error);
                              
           if(($row = mysqli_fetch_row($res)) == null){

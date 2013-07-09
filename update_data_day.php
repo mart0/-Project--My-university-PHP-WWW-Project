@@ -10,52 +10,42 @@
         $humidity=$_POST['humidity'];
         $humidity = $mysqli->real_escape_string($humidity);
 
+
         $hours=$_POST['hours'];
         $hours = $mysqli->real_escape_string($hours);
 
         list($loc_id, $loc_name) = explode('|', $_POST['location']);
-
+ 
         $image_id=$_POST['images'];
-        $query="UPDATE `weather_day_data` 
-                SET `id_location`='$loc_id',
-                    `day_date`='$date', 
-                    `day_temp`='$temperature',
-                    `day_humidity`='$humidity',
-                    `image_id`='$image_id'
-                WHERE id_location='$loc_id'
-                AND day_date = '$date'";
-/*
-
-                UPDATE `weather_day_data` 
-                SET `id`=[value-1],
-                `id_location`=[value-2],
-                `day_date`=[value-3],
-                `day_temp`=[value-4],
-                `day_humidity`=[value-5],
-                `image_id`=[value-6] 
-                WHERE 1
-
-
-                $query="UPDATE `weather_data` 
-                SET `weather_date`='$date',
-                `weather_temp`='$temperature',
-                `weather_humidity`='$humidity',
-                `weather_hour`='$hours',
-                `location_id_location`='$loc_id',
-                `image_hour_id`='$image_hour_id'
-                WHERE location_id_location='$loc_id'
-                AND weather_hour = '$hours'";*/
-
+        list($loc_id, $loc_name) = explode('|', $_POST['location']);
+    
+        $query="SELECT  *
+                FROM weather_day_data 
+                WHERE  day_date='$date'
+                AND id_location='$loc_id '";
+       
         $res = $mysqli->query($query) or die($mysqli->error);
-            if (($res) != null){                       
+        if (($row = mysqli_fetch_row($res)) == null){                       
              echo false;
-            }else {
-                $result = $mysqli->query("DELETE FROM `weather_day_data` 
-                                    WHERE `id_location`='$loc_id'
-                                    AND `day_date`='$date'") 
-                                    or die($mysqli->error);
-            echo true;
+        }else {
+       
+                $query="UPDATE `weather_day_data` 
+                        SET `day_temp`='$temperature',
+                            `day_humidity`='$humidity',
+                            `image_id`='$image_id'
+                        WHERE id_location='$loc_id'
+                        AND day_date = '$date'";
+
+            $result = $mysqli->query($query) or die($mysqli->error);
+
+            if($result!=null){
+                    echo true;
+            }else{
+                echo false;
             }
+
+        }
+
         }else{
             echo false;
         }

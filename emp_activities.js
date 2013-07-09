@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	$('#emp_submit1').click(function() {
+
 		$.ajax({
 			type: "POST",
 			url: "add_data.php",
@@ -89,7 +90,9 @@ $(document).ready(function () {
 				/*console.log(data);*/
 				/*$('#warning').show('fast');*/
 				$('#warning').text("Proccesing...");
-				if(data==false){
+
+				if(data==true){
+
 					$('#warning').text("Yep success");
 					$('#warning').show("fast").delay(2000).hide("slow");
 				}else{
@@ -108,11 +111,12 @@ $(document).ready(function () {
 				console.log(data);
 				/*$('#warning').show('fast');*/
 				$('#warning').text("Proccesing...");
-				if(data==false){
+<
+				if(data==true){
 					$('#warning').text("Yep success");
 					$('#warning').show("fast").delay(2000).hide("slow");
 				}else{
-					$('#warning').text("Yep success");
+					$('#warning').text("Ooh no can not update data!");
 					$('#warning').show("fast").delay(2000).hide("slow");
 				}
 			}
@@ -132,8 +136,10 @@ $(document).ready(function () {
 		$("#update_data").hide("fast");
 		$("#update_day_data").hide("fast");	
 		$("#delete_data").show("slow");	
-		$("#delete_day_data").show("slow");	
-		$('#updt').css("margin-right", "359px");	 
+
+		$("#delete_day_data").show("slow");
+		$('#updt').css("margin-right", "370px");		 
+
 	});
 	$('#updt').click(function() {
 		$("#add_data").hide("fast");
@@ -142,5 +148,6 @@ $(document).ready(function () {
 		$("#delete_day_data").hide("fast");	
 		$("#update_data").show("slow");	
 		$("#update_day_data").show("slow");	 
+
 	});
 });
