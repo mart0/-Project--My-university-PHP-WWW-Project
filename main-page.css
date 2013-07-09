@@ -3,15 +3,19 @@ body, div, ul, li , a {
 	padding: 0;
 }
 
+html{
+	height: auto;
+}
 body {
-	  background-image: url("images/bg.jpg");
-	  background-position: center;
-	  background-repeat:  no-repeat ; 
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-	  font-family: Arial, Verdana, Serif;
+	min-height: 400px;
+	background-image: url("images/bg.jpg");
+	background-position: center;
+	background-repeat:  no-repeat ; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: Arial, Verdana, Serif;
 }
 #wrapper {
 	margin: 50px auto;
@@ -84,11 +88,11 @@ nav li:hover, #options li:hover {
 /*------------ Actual content--------------*/
 #wrapper-content {
 	width:960px;
-	height:550px;
+	height:auto;
 }
 section {
 	width: 960px;
-	height: auto;
+	min-height: fit-content;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-color: rgba(255,255,255,0.7);
@@ -250,7 +254,7 @@ p {
  	display: none;
  }
 
-#tempgraph, #humgraph{
+#tempgraph, #humgraph, #fiveday_chart{
 	width:800px !important;
 	height: 260px !important;
 	font-size: 12px !important;
@@ -265,16 +269,21 @@ p {
 footer {
 	width: 960px;
 	height: 45px;
-	background-color: rgba(255,255,255,0.7);
-	border-radius: 0 0 10px 10px;
-	margin-top: 210px;
+	
+	
+	/*margin-top: 210px;*/
 }
 
 footer p {
+	width: 960px;
+	height: 45px;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 0 0 10px 10px;
 	font-size: 17px;
 	font-family: Arial, Verdana;
 	margin: 10px;
 	float: left;
+
 }
 
 footer a {

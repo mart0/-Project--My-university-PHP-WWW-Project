@@ -77,22 +77,21 @@
 					<!-- Add Employee FORM -->
 					<div>
 						<form class="enter_data" id="employee_form" action="" method="post" onsubmit="return false;" >
-						
-						<label for="user_name">User Name&nbsp;&nbsp;&nbsp;</label> 
-						<input type="text" id="user_name" name="user_name" placeholder="enter employee's name here" > <br> <br>
-						<label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
-						<input type="password" id="password" name="password" > <br> <br>
-						<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-						<input type="text" id="name" name="name" placeholder="first name and last name" >  <br> <br>
-						<label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-						<input type="email" id="email" name="email" required placeholder="something@gmail.com"> <br> <br>
-						<button type="submit" id="admin_submit">Save</button>
+							<label for="user_name">User Name&nbsp;&nbsp;&nbsp;</label> 
+							<input type="text" id="user_name" name="user_name" placeholder="enter employee's name here" > <br> <br>
+							<label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+							<input type="password" id="password" name="password" > <br> <br>
+							<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<input type="text" id="name" name="name" placeholder="first name and last name" >  <br> <br>
+							<label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<input type="email" id="email" name="email" required placeholder="something@gmail.com"> <br> <br>
+							<button type="submit" id="admin_submit">Save</button>
 						</form>
 						<!-- Add Location FORM -->
 						<form class="enter_data" id="location_form" action="" method="post" onsubmit="return false;">
-						<label for="location">Location</label>
+							<label for="location">Location</label>
 							<input type="text" id="location" name="location" placeholder="Sofia">
-						<button type="submit" id="loc_submit">Save</button>
+							<button type="submit" id="loc_submit">Save</button>
 						</form>
 						
 						<!-- Assign Task Form -->
@@ -113,8 +112,9 @@
 							    
 								} 
 								echo "</select>";?>
-
-								<br/><br/>	
+								<br>
+								<br>
+									
 							<label for="employees">Employees</label>
 								<?php 
 								$query="SELECT id_emp, user_emp_name
@@ -130,16 +130,21 @@
 								 echo '<option value='."$row[0]|$row[1]".'>'. $row[1].'</option>'; 
 							    
 								}
-								echo "</select>";?><br/><br/>
+								echo "</select>";?>
+								<br>
+								<br>
 							<label for="start_date">Start date</label>
-							<input type="date" id="start_date" name="start_date"><br/><br/>
+							<input type="date" id="start_date" name="start_date">
+							<br>
+							<br>
 							<label for="final_date">Final date</label>
 							<input type="date" id="final_date" name="final_date">
+							<br>
 							<button type="submit" id="assing_submit">Save</button>
 						</form>
 						<!-- Delete Location Form -->
 						<form action="delete_location.php" id="del_location" method="post" >
-						<label for="location">Location</label>
+						<label for="location">Location</label> <br>
 						<button id="del_loc">Delete</button>
 							<?php 
 							$query="SELECT id_location, location_name
@@ -157,10 +162,11 @@
 								} 
 								echo "</select>";?>
 								
-						</form><br/>
+						</form>
 						<!-- Delete Employee Form -->
 						<form action="delete_employee.php" id="del_employee" method="post" >
-							<label for="employees">Employees</label>
+							<label for="employees">Employees</label> <br>
+							<button type="submit" id="del_emp">Delete</button>
 								<?php 
 								$query="SELECT id_emp, user_emp_name
 						                FROM employee";
@@ -177,12 +183,12 @@
 								}
 								echo "</select>";?>
 							
-						<button type="submit" id="del_emp">Delete</button>
-						</form><br/>
+						
+						</form>
 						
 						<!-- Edit Form -->
 						<form class="edit_data" id="edit_employee" action="edit_employee.php" method="post" >
-							<label for="employees">Employees</label>
+							<label for="employees">Employees</label> 
 								<?php 
 								$query="SELECT id_emp, user_emp_name
 						                FROM employee";
@@ -198,15 +204,15 @@
 							    
 								}
 								echo "</select>";?>
-						</label>
-						 <br>
-						<label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
-						<input type="password" id="password" name="password" > <br>
-						<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
-						<input type="text" id="name" name="name" placeholder="first name and last name" > <br>
-						<label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-						<input type="email" id="email" name="email" required placeholder="something@gmail.com" > <br>
-						<button type="submit" id="edit_emp">Edit</button>
+						
+							 <br> <br>
+							<label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<input type="password" id="password" name="password" > <br> <br>
+							<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<input type="text" id="name" name="name" placeholder="first name and last name" > <br> <br>
+							<label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+							<input type="email" id="email" name="email" required placeholder="something@gmail.com" > <br><br>
+							<button type="submit" id="edit_emp">Edit</button>
 						</form>
 						</div>
 					</div>

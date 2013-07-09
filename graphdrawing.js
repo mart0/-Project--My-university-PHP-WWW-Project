@@ -25,7 +25,7 @@ function drawtemps(temps){
 		var temp1_y = (-(temps[counter]+minTemp))*pixPerCelcius + temperatureRadius + canvasTopBuffer;
 		context.beginPath();
 	 	context.arc(temp1_x,temp1_y,temperatureRadius,0,2*Math.PI);
-	 	context.fillText(temps[counter].toFixed(1) + " deg.",temp1_x ,temp1_y - 10);
+	 	//context.fillText(temps[counter].toFixed(1) + " deg.",temp1_x ,temp1_y - 10);
 
 	 	context.fill();
 
@@ -54,7 +54,7 @@ function drawtemps(temps){
 			data.push(temp);
 			var y = (-(temp+minTemp))*pixPerCelcius + temperatureRadius + canvasTopBuffer;
 		 	context.arc(x,y,temperatureRadius,0,2*Math.PI);
-		 	context.fillText(temp.toFixed(1) + " deg.",x ,y - 10);
+		 	//context.fillText(temp.toFixed(1) + " deg.",x ,y - 10);
 		 	context.fill();
 		}
 
@@ -126,7 +126,7 @@ var data1 = new Array();
 			data1.push(hum);
 			var y = (-(hum+minHum))*pixPerCelcius + temperatureRadius + canvasTopBuffer;
 		 	context.arc(x,y,temperatureRadius,0,2*Math.PI);
-		 	context.fillText(hum.toFixed(1) + " deg.",x ,y - 10);
+		 	//context.fillText(hum.toFixed(1) + " deg.",x ,y - 10);
 		 	context.fill();
 		}
 		
@@ -152,6 +152,7 @@ $(document).ready(function(){
 				$('#field_5day').hide("fast");
 				$('#tempgraph').hide("fast");
 				$('#humgraph').hide("fast");
+				$('#fiveday_chart').hide('fast');
 				$.ajax({
 					type: "GET",
 					url: 'http://localhost/Weather%20Center/load_info.php?id='+$id,
@@ -209,6 +210,7 @@ $(document).ready(function(){
 				$('#field_5day').hide("fast");
 				$('#tempgraph').hide("fast");
 				$('#humgraph').hide("fast");
+				$('#fiveday_chart').hide('fast');
 				$.ajax({
 					type: "GET",
 					url: 'http://localhost/Weather%20Center/load_info_24hours.php?id='+$id,
@@ -424,6 +426,32 @@ $(document).ready(function(){
 								$('#field_5day').find('.humidity_'+i).text("no info");
 							}
 						}
+						var ctx = $("#fiveday_chart").get(0).getContext("2d");
+						var my5DayChart = new Chart(ctx);
+						var data = {
+							labels : dates,
+							datasets : [
+								{
+						
+									fillColor : "rgba(240,0,0,0.5)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : drawtemps(temps)
+								},
+							
+								{
+									fillColor : "rgba(0,50,240,0.5)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : drawhumidities(humidities)
+								},
+								
+							]
+						}
+						new Chart(ctx).Line(data,options);
+						$('#fiveday_chart').show('fast');
 					}
 					
 				});
@@ -434,6 +462,7 @@ $(document).ready(function(){
 				$('#result').hide("fast");
 				$('#field_5day').hide("fast");
 				$('#field_24').hide("fast");
+				$('#fiveday_chart').hide('fast');
 				
 				var id = $('#location').children(":selected").attr("id");
 				var temps=new Array();

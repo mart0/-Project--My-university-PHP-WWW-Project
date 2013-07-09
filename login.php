@@ -24,7 +24,7 @@
 		    if ($res->num_rows > 0) {
 		    	$row=$res->fetch_assoc();
 		    	session_start();
-		    	$_SESSION['isLogged'] = true;
+		    	//$_SESSION['isLogged'] = true;
 		    	$_SESSION['user_id'] = $row['id_emp'];
 		    	//echo  $_SESSION['user_id'];
 		    	header("Location: employee_form.php");
@@ -34,8 +34,8 @@
 	   		 	if ($res->num_rows > 0) {
 			    	$row=$res->fetch_assoc();
 			    	session_start();
-			    	$_SESSION['isLogged'] = true;
-			    	$_SESSION['user_id'] = $row['id'];
+			    	//$_SESSION['isLogged'] = true;
+			    	$_SESSION['admin_id'] = $row['id'];
 			    	//echo  $_SESSION['user_id'];
 			    	header("Location: admin_form.php");
 			    	

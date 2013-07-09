@@ -178,13 +178,13 @@ p {
  	margin-top: -109px;
  }
  form{
- padding-right:20px;
+ 	padding-right:20px;
  
  }
  form input{
- float:right;
+ 	float:right;
  }
+
  #edit_emp{
-   
     margin-left:180px;
  }

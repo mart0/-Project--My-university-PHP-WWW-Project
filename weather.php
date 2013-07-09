@@ -15,20 +15,12 @@
 		</header>
 		<nav class="left clear">
 			<ul>
-				
 				<li class="right clear"><a href="login.html">Log in</a></li>
-				
 			</ul>
 		</nav>
 		<div id="wrapper-content">
 			<section class="left clear">
 				<div id="city_option">
-					<!-- <select name="city" id="city">
-						<option value="select" selected="selected">Select location</option>
-						<option id="option_sofia">Sofia</option>
-						<option id="option_plovdiv">Plovdiv</option>
-						<option id="option_stara_zagora">Stara Zagora</option>
-					</select> -->
 					<div id="options">
 						<ul>
 							<li id="today" > Today </li>
@@ -38,23 +30,24 @@
 						</ul>
 					</div>
 					<?php 
-							$query="SELECT id_location, location_name
-						                FROM location";
-								$res = $mysqli->query($query);
-								if (!$res) {
-								    echo 'Could not run query: ' . $mysqli->error();
-								    exit;
-								}
-								echo '<select name="location" id="location">';
-								while (($row = mysqli_fetch_row($res)) != null)
-								{
-								 echo '<option id='.$row[0].' value='. $row[0] .'>'. $row[1].'</option>'; 
-							    
-								}?>
-							</select>
+						$query="SELECT id_location, location_name
+					                FROM location";
+							$res = $mysqli->query($query);
+							if (!$res) {
+							    echo 'Could not run query: ' . $mysqli->error();
+							    exit;
+							}
+							echo '<select name="location" id="location">';
+							while (($row = mysqli_fetch_row($res)) != null)
+							{
+							 echo '<option id='.$row[0].' value='. $row[0] .'>'. $row[1].'</option>'; 
+						    
+							}?>
+						</select>
 				</div>
 				<canvas id="tempgraph" width="800px" height="260px"></canvas>
 				<canvas id="humgraph" width="800px" height="260px"></canvas>
+				<canvas id="fiveday_chart" width="800px" height="260px"></canvas>
 				<div id="result"> 
 					<img src="" id="today_image"><br/>
 					<label for="date">Date:</label>
@@ -192,8 +185,6 @@
 						<span class="humidity_11"></span>
 					</div>
 				</div>
-				
-				
 				<div id="field_5day">
 					<div id="day_date_0">
 						<img src="" class="image">

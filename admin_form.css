@@ -14,7 +14,9 @@ section {
 	margin-left: 50px;
 	margin-bottom: 30px;
 }
-
+#employee_name select{
+	margin-right: 100px;
+}
 
 button:hover {
 	background: rgb(219, 219, 219); /* Old browsers */
@@ -29,6 +31,7 @@ button:hover {
 form {
 	display: inline-block;
 	padding: 10px;
+	margin-top: 20px;
 	border-radius: 10px;
 	background: rgba(255,255,255,0.5);
 }
@@ -140,22 +143,14 @@ margin-top:-200px;
 	float:right;
 }
 
-#employees {
-	margin-right: 90px;
-}
 
 #location {
 	/*margin-right: 110px;*/
 }
 
-#assign_form {
-	width: 350px;
+#assign_form  {
 	display: none;
-	margin-left: 210px;
-    margin-top: 20px;
-    padding: 21px;
 }
-
 #assign_form label {
 	float: left;
 	margin: 0px;
@@ -219,7 +214,7 @@ footer a:hover {
 }
 
 #edit_employee input {
-	margin: 10px 0 10px 52px;
+	margin: 0 0 10px 52px;
     width: 174px;
     -o-border-radius: 2px;
 	-moz-border-radius: 2px;
