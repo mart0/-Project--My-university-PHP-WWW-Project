@@ -24,6 +24,7 @@
 						<ul>
 							<li id="today" > Today </li>
 							<li id="24_hour"> Next 24 hours</li>
+							<li id="3_days"> Next 3 days</li>
 							<li id="5_days" > Next 5 days</li>
 							<li id="10_days" > Next 10 days</li>
 							<li id="graphics" >Graphics</li>
@@ -48,6 +49,7 @@
 				<canvas id="tempgraph" width="800px" height="260px"></canvas>
 				<canvas id="humgraph" width="800px" height="260px"></canvas>
 				<canvas id="fiveday_chart" width="800px" height="260px"></canvas>
+				<canvas id="threeday_chart" width="800px" height="260px"></canvas>
 				<div id="result"> 
 					<img src="" id="today_image"><br/>
 					<label for="date">Date:</label> <br>
@@ -232,7 +234,11 @@
 						<span class="humidity_4"></span>
 					</div>
 				</div>
+<<<<<<< HEAD
 				<div id="field_10days">
+=======
+				<div id="field_3day">
+>>>>>>> d4e6ffd27585bbb5a5db47994e305213be9258b2
 					<div id="day_date_0">
 						<img src="" class="image">
 						<label for="date">Date:</label>
@@ -260,6 +266,7 @@
 						<label for="humidity">Humidity: </label>
 						<span class="humidity_2"></span>
 					</div>
+<<<<<<< HEAD
 					<div id="day_date_3">
 						<img src="" class="image">
 						<label for="date">Date:</label>
@@ -323,6 +330,8 @@
 						<label for="humidity">Humidity: </label>
 						<span class="humidity_9"></span>
 					</div>
+=======
+>>>>>>> d4e6ffd27585bbb5a5db47994e305213be9258b2
 				</div>
 			</section>
 		</div>

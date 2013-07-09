@@ -214,7 +214,7 @@ session_start(); ?>
 	<script type="text/javascript" src="ajax_session.js"></script>
 	<script src="http://malsup.github.com/jquery.form.js"></script> 
 	<script type="text/javascript" src="emp_activities.js"></script>
-	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	
 
 </body>
 </html>
