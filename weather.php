@@ -234,11 +234,8 @@
 						<span class="humidity_4"></span>
 					</div>
 				</div>
-<<<<<<< HEAD
-				<div id="field_10days">
-=======
 				<div id="field_3day">
->>>>>>> d4e6ffd27585bbb5a5db47994e305213be9258b2
+
 					<div id="day_date_0">
 						<img src="" class="image">
 						<label for="date">Date:</label>
@@ -266,7 +263,37 @@
 						<label for="humidity">Humidity: </label>
 						<span class="humidity_2"></span>
 					</div>
-<<<<<<< HEAD
+				</div>
+
+				<div id="field_10days">
+
+					<div id="day_date_0">
+						<img src="" class="image">
+						<label for="date">Date:</label>
+				    	<span class="date_0"></span> <br/>
+						<label for="temperature" >Temperature: </label>
+						<span class="temperature_0"></span> <br/>
+						<label for="humidity">Humidity: </label>
+						<span class="humidity_0"></span>
+					</div>
+					<div id="day_date_1">
+						<img src="" class="image">
+						<label for="date">Date:</label>
+				    	<span class="date_1"></span> <br/>
+						<label for="temperature" >Temperature: </label>
+						<span class="temperature_1"></span> <br/>
+						<label for="humidity">Humidity: </label>
+						<span class="humidity_1"></span>
+					</div>
+					<div id="day_date_2">
+						<img src="" class="image">
+						<label for="date">Date:</label>
+				    	<span class="date_2" data-id></span> <br/>
+						<label for="temperature" >Temperature: </label>
+						<span class="temperature_2"></span> <br/>
+						<label for="humidity">Humidity: </label>
+						<span class="humidity_2"></span>
+					</div>
 					<div id="day_date_3">
 						<img src="" class="image">
 						<label for="date">Date:</label>
@@ -330,8 +357,7 @@
 						<label for="humidity">Humidity: </label>
 						<span class="humidity_9"></span>
 					</div>
-=======
->>>>>>> d4e6ffd27585bbb5a5db47994e305213be9258b2
+
 				</div>
 			</section>
 		</div>

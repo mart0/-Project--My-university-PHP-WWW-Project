@@ -575,6 +575,7 @@ var data1 = new Array();
 				$('#result').hide("fast");
 				$('#field_24').hide("fast");
 				$('#tempgraph').hide("fast");
+				$('#field_5day').hide("fast");
 				$('#humgraph').hide("fast");
 				$.ajax({
 					type: "GET",
