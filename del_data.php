@@ -3,7 +3,7 @@
     if(!empty($_POST)){
     	$date = $_POST['date'];
 	    $date = $mysqli->real_escape_string($date);
-         list($loc_id, $loc_name) = explode('|', $_POST['location']);
+        list($loc_id, $loc_name) = explode('|', $_POST['location']);
 	    $hours=$_POST['hours'];
         $query="SELECT  *
                 FROM weather_data 

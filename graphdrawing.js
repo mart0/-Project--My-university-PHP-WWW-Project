@@ -92,7 +92,7 @@ function drawhumidities(humidities){
 	 	context.fillText(i + "%",810,(-(i-maxHum))*pixPerCelcius + temperatureRadius + canvasTopBuffer);
 	};
 	///////////////////////////////////////////////////////////////////
-for(var i = 0; i < nulls; i++){
+/*for(var i = 0; i < nulls; i++){
 			context.beginPath();
 			var x = (canvasWidth/12)*(counter - nulls + i) + temperatureRadius + 15;
 			var temp = newtemp * ((i+1)/(nulls+1)) + oldtemp * ((nulls-i)/(nulls+1));
@@ -103,7 +103,7 @@ for(var i = 0; i < nulls; i++){
 		 	context.fill();
 		}
 
-		context.restore();
+		context.restore();*/
 
 	//var temps = new Array(8,NaN,NaN,18,40,23,NaN,24,-40,21,15,12);
 	for (var counter = 0; counter < length;) {

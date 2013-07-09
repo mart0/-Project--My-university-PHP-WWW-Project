@@ -1,6 +1,6 @@
 <?php
 	//connect
-	$mysqli =  new mysqli("localhost", "root", "", "weather_db");
+	$mysqli =  new mysqli("localhost", "root", "genimart", "weather_db");
  	//check connection
 	if ($mysqli->connect_error) {
 	    die("Failed to connect to MySQL: " 
