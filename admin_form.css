@@ -64,7 +64,6 @@ p {
 select {
     float:right;
 	width: 200px;
-	margin-left: 64px;
 	border-radius: 5px;
 	background: rgb(226,226,226); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(254,254,254,1) 50%, rgba(219,219,219,1) 54%, rgba(219,219,219,1) 68%); /* FF3.6+ */
@@ -104,7 +103,7 @@ select {
 margin-top:-200px;
 }
 
-#emp_submit, #emp_submit1 {
+#emp_submit, #emp_submit1, #delete, #delete1, #update, #update1 {
 	margin: 17px 0 0 330px;
 	border:1px solid;
 	border-radius: 3px;
@@ -120,6 +119,7 @@ margin-top:-200px;
 	border:1px solid;
 	border-radius: 3px;
 }
+
 #location_form {
 	width: 300px;
 	position: relative;
@@ -128,15 +128,26 @@ margin-top:-200px;
 	float: right;
 	margin-right: 150px;
 }
+
 #employee_form {
 	width: 450px;
 	margin-top: 10px;
 	display: none;
 	float: left;
 }
+
 #location, #employees input{
 	float:right;
 }
+
+#employees {
+	margin-right: 90px;
+}
+
+#location {
+	/*margin-right: 110px;*/
+}
+
 #assign_form {
 	width: 350px;
 	display: none;
@@ -215,6 +226,7 @@ footer a:hover {
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	border: 1px solid gray;
+	float: right;
 }
 
 #edit_employee button {
@@ -227,6 +239,10 @@ footer a:hover {
 	border-radius: 4px;
 	border: 1px solid gray;
 	float: right;
+}
+
+#edit_employee label {
+	float: left;
 }
 
 #del_location button {
@@ -265,17 +281,17 @@ nav ul #logout {
 	float: right;
 	
 }
-#assing_submit{
+#assing_submit {
     margin-top:25px;
     margin-left:300px;
 }
 
-#delete_data {
+#delete_data, #update_data {
 	float: left;
 	display: none;
 }
 
- #delete_day_data {
+ #delete_day_data, #update_day_data {
  	float: right;
  	display: none;
  }
@@ -283,5 +299,6 @@ nav ul #logout {
  #add_data, #add_data_day {
  	display: none;
  }
+
 
 

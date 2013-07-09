@@ -2,7 +2,6 @@
 <html>
 <head>
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script> 
-	
 	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 	<title>dalipiche.com</title>
 	<link rel="stylesheet" type="text/css" href="main-page.css">

@@ -119,7 +119,7 @@ footer {
 
 #location {
 	width: 200px;
-	margin-left: 64px;
+	/*margin-right: 110px !important;*/
 	border-radius: 5px;
 	background: rgb(226,226,226); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(226,226,226,1) 0%, rgba(254,254,254,1) 50%, rgba(219,219,219,1) 54%, rgba(219,219,219,1) 68%); /* FF3.6+ */
