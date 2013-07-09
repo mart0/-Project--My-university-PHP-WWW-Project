@@ -157,7 +157,6 @@ var data1 = new Array();
 				$('#fiveday_chart').hide('fast');
 				$('#field_3day').hide("fast");
 				$('#threeday_chart').hide('fast');
-				ni
 				$.ajax({
 					type: "GET",
 					url: 'http://localhost/Weather%20Center/load_info.php?id='+$id,
