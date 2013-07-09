@@ -136,10 +136,12 @@ var data1 = new Array();
 	 	context.moveTo(hum1_x,hum1_y);
 	 	context.lineTo((canvasWidth/12)*counter + 15,canvasTopBuffer + (-(humidities[counter]+minHum))*pixPerCelcius + temperatureRadius);
 	 	context.stroke();
+
 	 	
 	}
 	console.log(data1);
 	 	return data1;
+
 }
 
 
@@ -350,6 +352,7 @@ $(document).ready(function(){
 									$('#field_24').find('.humidity_'+i).text(hums[i]);
 									$('#field_24').find('.hour_'+i).show('fast');
 									$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').show('fast');
+
 									$('.hidden_fields1, .hidden_fields2').hide("fast");
 							
 							}else{
@@ -572,7 +575,9 @@ $(document).ready(function(){
 							console.log(k);
 							
 						//var array_temp=new Array();
+
 						console.log("hums : "+drawhumidities(hums));
+
 						var data1 = {
 							labels : ["2:00","4:00","6:00","8:00","10:00","12:00","14:00","16:00","18:00","20:00","22:00","24:00"],
 							datasets : [
@@ -595,7 +600,10 @@ $(document).ready(function(){
 									strokeColor : "rgba(220,220,220,1)",
 									pointColor : "rgba(220,220,220,1)",
 									pointStrokeColor : "#fff",
+
+
 									data : drawhumidities(hums)
+
 								},
 								
 							]

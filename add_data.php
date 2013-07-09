@@ -64,4 +64,14 @@
     }else{
     		echo false;
     	}
+
+
+
+   /*     $res = mysql_real_escape_string($res);  // SECURITY!
+$result = mysql_query("SELECT 1 FROM preditors_assigned WHERE lecture_name='$res' LIMIT 1");
+if (mysql_fetch_row($result)) {
+    return 'Assigned';
+} else {
+    return 'Available';
+}*/
     

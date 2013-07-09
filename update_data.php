@@ -15,6 +15,7 @@
         $hours = $mysqli->real_escape_string($hours);
 
 	    list($loc_id, $loc_name) = explode('|', $_POST['location']);
+
         $image_hour_id=$_POST['images'];
 
         $flag=false;

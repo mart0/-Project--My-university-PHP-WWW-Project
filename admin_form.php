@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<title>dalipiche.com</title>
 	<link rel="stylesheet" type="text/css" href="weather.css">
 	<link rel="stylesheet" type="text/css" href="admin_form.css">
@@ -222,133 +222,9 @@
 		 	<footer>
 		 		<p>Designed by <a href="http://martomarinov.wordpress.com/">Martin Marinov</a> and <a href="http://bg.linkedin.com/pub/gergana-atanasova/72/2b4/165/">Gergana Atanasova</a>, Copyright &#169; 2013. All rights reserved.</p>
 			</footer>
-	</div>
-	<script src="http://code.jquery.com/jquery-1.10.2.js"></script> 
+	</div> 
 	<script type="text/javascript" src="ajax_session.js"></script>
-<script>
-	$(document).ready(function () {
-		
-
-    	$('#add_emp').click(function() {
-    		$('#location_form').hide("fast");
-    		$('#assign_form').hide("fast");
-    		$('#del_location').hide("fast");
-    		$('#del_employee').hide("fast");
-    		$('#edit_employee').hide("fast");
-    		$('#employee_form').show("slow");
-
-        });
-    	$('#admin_submit').click(function() {
-
-    			$.ajax({
-				    type: "POST",
-				    url: "form_employee.php",
-				    data: $("#employee_form").serialize(),
-				    success: function(data){
-				    	console.log(data);
-				    	$('#warning').show('fast');
-				    	$('#warning').text("Proccesing...");
-				    	if(data==true){
-				    		$('#warning').text("Yep success");
-				    	}else{
-
-				    		$('#warning').text("Ooh no can not insert data or this user name allready exist");
-				    	}
-				    }
-				 });
-
-    	});
-
-        
-        $('#add_loc').click(function() {
-        	$('#employee_form').hide("fast");
-    		$('#assign_form').hide("fast");
-    		$('#del_location').hide("fast");
-    		$('#del_employee').hide("fast");
-    		$('#edit_employee').hide("fast");
-        	$("#location_form").show("slow").css("display","inline-block","float","right");
-    	});
-
-        $('#loc_submit').click(function() {
-
-    			$.ajax({
-				    type: "POST",
-				    url: "form_location.php",
-				    data: $("#location_form").serialize(),
-				    success: function(data){
-				    	console.log(data);
-				    	$('#warning').show('fast');
-				    	$('#warning').text("Proccesing...");
-				    	if(data==true){
-				    		$('#warning').text("Yep success");
-				    	}else{
-
-				    		$('#warning').text("Ooh no can not assign this location to this employee");
-				    	}
-				    }
-				 });
-
-    	});
-    	
-        
-
-    	$('#assign').click(function() {
-    		$('#location_form').hide("fast");
-    		$('#employee_form').hide("fast");
-    		$('#del_location').hide("fast");
-    		$('#del_employee').hide("fast");
-    		$('#edit_employee').hide("fast");
-    		$('#assign_form').show("slow");
-        });
-
-    	$('#assing_submit').click(function() {
-
-    			$.ajax({
-				    type: "POST",
-				    url: "assign_form.php",
-				    data: $("#assign_form").serialize(),
-				    success: function(data){
-				    	console.log(data);
-				    	$('#warning').show('fast');
-				    	$('#warning').text("Proccesing...");
-				    	if(data==true){
-				    		$('#warning').text("Yep success");
-				    	}else{
-
-				    		$('#warning').text("Ooh no can not assign this location to this employee");
-				    	}
-				    }
-				 });
-
-    	});
-    	
-
-        $('#del_loc').click(function() {
-    		$('#location_form').hide("fast");
-    		$('#employee_form').hide("fast");
-    		$('#assign_form').hide("fast");
-    		$('#del_employee').hide("fast");
-    		$('#edit_employee').hide("fast");
-    		$('#del_location').show("slow");
-        });
-        $('#del_emp').click(function() {
-    		$('#location_form').hide("fast");
-    		$('#employee_form').hide("fast");
-    		$('#assign_form').hide("fast");
-    		$('#del_location').hide("fast");
-    		$('#edit_employee').hide("fast");
-    		$('#del_employee').show("slow");
-        });
-        $('#edit').click(function() {
-    		$('#location_form').hide("fast");
-    		$('#employee_form').hide("fast");
-    		$('#assign_form').hide("fast");
-    		$('#del_location').hide("fast");
-    		$('#del_employee').hide("fast");
-    		$('#edit_employee').show("slow");
-        });
-	}); 
-</script> 
+	<script type="text/javascript" src="admin_form.js"></script>
 </body>
 </html>
 

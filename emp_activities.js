@@ -90,7 +90,9 @@ $(document).ready(function () {
 				/*console.log(data);*/
 				/*$('#warning').show('fast');*/
 				$('#warning').text("Proccesing...");
+
 				if(data==true){
+
 					$('#warning').text("Yep success");
 					$('#warning').show("fast").delay(2000).hide("slow");
 				}else{
@@ -109,6 +111,7 @@ $(document).ready(function () {
 				console.log(data);
 				/*$('#warning').show('fast');*/
 				$('#warning').text("Proccesing...");
+<
 				if(data==true){
 					$('#warning').text("Yep success");
 					$('#warning').show("fast").delay(2000).hide("slow");
@@ -133,8 +136,10 @@ $(document).ready(function () {
 		$("#update_data").hide("fast");
 		$("#update_day_data").hide("fast");	
 		$("#delete_data").show("slow");	
+
 		$("#delete_day_data").show("slow");
 		$('#updt').css("margin-right", "370px");		 
+
 	});
 	$('#updt').click(function() {
 		$("#add_data").hide("fast");

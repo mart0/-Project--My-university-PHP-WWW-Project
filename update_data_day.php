@@ -12,6 +12,12 @@
         $humidity=$_POST['humidity'];
         $humidity = $mysqli->real_escape_string($humidity);
 
+
+        $hours=$_POST['hours'];
+        $hours = $mysqli->real_escape_string($hours);
+
+        list($loc_id, $loc_name) = explode('|', $_POST['location']);
+ 
         $image_id=$_POST['images'];
         list($loc_id, $loc_name) = explode('|', $_POST['location']);
     
@@ -59,6 +65,8 @@
                 }
             }
         }
-    }else{
-        echo false;
-    }
+
+        }else{
+            echo false;
+        }
+

@@ -142,8 +142,16 @@ margin-top:-200px;
 #location, #employees input{
 	float:right;
 }
+<<<<<<< HEAD
+/*
+#employees {
+	margin-right: 90px;
+}
+*/
+=======
 
 
+>>>>>>> 3154d864ae6562f99d5faa685ee95c803987ae94
 #location {
 	/*margin-right: 110px;*/
 }
