@@ -18,7 +18,7 @@ body {
 	width: 960px;
 	background: transparent;
 }
-#options{
+#options {
 	padding: 10px;
 	font-size: 20px;
 	color: #000;
@@ -97,7 +97,7 @@ section {
 
 
 
-.weather_info{
+.weather_info {
 	background-color: rgba(255,255,255,0.7);
 	width: 300px;
 	margin:30px auto;
@@ -187,7 +187,7 @@ section {
     display: none;
 }
 
-#day_date_0,#day_date_1,#day_date_2,#day_date_3,#day_date_4{
+#day_date_0,#day_date_1,#day_date_2,#day_date_3,#day_date_4 {
 	width:150px;
 	padding: 12px;
 	display: inline-block;
@@ -214,10 +214,11 @@ margin-top: -30px;
 background: url("images/back.png") no-repeat scroll 0 0 transparent;
 }
 
-.back{
+.back {
     margin-top:-260px;
 }
-.forward{
+
+.forward {
     margin-top:-260px;
 }
 
@@ -230,8 +231,6 @@ background: url("images/back.png") no-repeat scroll 0 0 transparent;
 	float: right;
 }
 
-
- 
 p {
  	font-size: 30px;
  	margin-left: 60px;
@@ -245,10 +244,9 @@ p {
  	border-right: 1px dotted gray;
  }
 
-
- .hidden_fields1, .hidden_fields2 {
+/*.hidden_fields1, .hidden_fields2 {
  	display: none;
- }
+ }*/
 
 #tempgraph, #humgraph{
 	width:800px !important;
@@ -256,8 +254,6 @@ p {
 	font-size: 12px !important;
 	display: none;
 }
-
-
 
 
 

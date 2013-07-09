@@ -61,7 +61,7 @@ session_start(); ?>
 							<option value="1">Sunny</option>
 							<option value="2">Cloudy</option>
 							<option value="3">Rain</option>
-						</select><button type="submit" id="emp_submit1">Add</button>
+						</select><button type="button" id="emp_submit1">Add</button>
 					</div>
 				</form>
 				<form action="" method="post" onsubmit="return false;" id="add_data_day">
@@ -97,7 +97,7 @@ session_start(); ?>
 							<option value="2">Cloudy</option>
 							<option value="3">Rain</option>
 						</select>
-						<button type="submit" id="emp_submit">Add</button>
+						<button type="button" id="emp_submit">Add</button>
 					</div>
 				</form>
 			<br/>
@@ -112,7 +112,7 @@ session_start(); ?>
 						<input type="date" id="date" name="date" placeholder="DD/MM/YYYY" required="required"> <br><br>
 						<label for="hours">Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 						<input type="number" id="hours" name="hours" placeholder="hours" required="required" min="0" max="24" step="2"> <br/><br/>
-						<button type="submit" id="delete">Delete</button>
+						<button type="button" id="delete">Delete</button>
 					</div>
 				</form>
 				<br/>
@@ -124,7 +124,7 @@ session_start(); ?>
 								<br> <br>
 						<label for="date">Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 						<input type="date" id="date" name="date" placeholder="DD/MM/YYYY" required="required"> <br><br>
-						<button type="submit" id="delete1">Delete</button>
+						<button type="button" id="delete1">Delete</button>
 					</div>
 				</form>
 
@@ -164,7 +164,7 @@ session_start(); ?>
 							<option value="2">Cloudy</option>
 							<option value="3">Rain</option>
 						</select><br/>
-						<button type="submit" id="update">Update</button>
+						<button type="button" id="update">Update</button>
 					</div>
 				</form>
 				<form action="" method="post" onsubmit="return false;" id="update_day_data">
@@ -200,7 +200,7 @@ session_start(); ?>
 							<option value="2">Cloudy</option>
 							<option value="3">Rain</option>
 						</select><br/>
-						<button type="submit" id="update1">Update</button>
+						<button type="button" id="update1">Update</button>
 					</div>
 				</form>
 			</div>
@@ -214,9 +214,6 @@ session_start(); ?>
 	<script src="http://malsup.github.com/jquery.form.js"></script> 
 	<script type="text/javascript" src="emp_activities.js"></script>
 	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-	
-
-	
 </body>
 </html>
 

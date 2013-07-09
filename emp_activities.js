@@ -21,11 +21,6 @@ $(document).ready(function () {
 	});
 
 
-
-
-
-
-
 	$('#emp_submit').click(function() {	
 		$.ajax({
 			type: "POST",
@@ -137,7 +132,8 @@ $(document).ready(function () {
 		$("#update_data").hide("fast");
 		$("#update_day_data").hide("fast");	
 		$("#delete_data").show("slow");	
-		$("#delete_day_data").show("slow");		 
+		$("#delete_day_data").show("slow");	
+		$('#updt').css("margin-right", "359px");	 
 	});
 	$('#updt').click(function() {
 		$("#add_data").hide("fast");

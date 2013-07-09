@@ -89,26 +89,15 @@ function drawhumidities(humidities){
 	context.fillStyle = "rgb(255,0,0)";
 	context.strokeStyle = "rgb(255,0,0)";
 	for (var i = minHum; i<=maxHum ; i+=10) {
-	 	context.fillText(i + "%",810,(-(i-maxHum))*pixPerCelcius + temperatureRadius + canvasTopBuffer);
+	 	context.fillText(i + "%",810,(-(i+minHum))*pixPerCelcius + temperatureRadius + canvasTopBuffer);
 	};
-	///////////////////////////////////////////////////////////////////
-/*for(var i = 0; i < nulls; i++){
-			context.beginPath();
-			var x = (canvasWidth/12)*(counter - nulls + i) + temperatureRadius + 15;
-			var temp = newtemp * ((i+1)/(nulls+1)) + oldtemp * ((nulls-i)/(nulls+1));
-			data.push(temp);
-			var y = (-(temp+minTemp))*pixPerCelcius + temperatureRadius + canvasTopBuffer;
-		 	context.arc(x,y,temperatureRadius,0,2*Math.PI);
-		 	context.fillText(temp.toFixed(1) + " deg.",x ,y - 10);
-		 	context.fill();
-		}
-
-		context.restore();*/
-
+	
 	//var temps = new Array(8,NaN,NaN,18,40,23,NaN,24,-40,21,15,12);
+
+var data1 = new Array();
 	for (var counter = 0; counter < length;) {
 		var hum1_x = (canvasWidth/12)*counter + temperatureRadius + 15;
-		var hum1_y = (-(humidities[counter]-maxHum))*pixPerCelcius + temperatureRadius + canvasTopBuffer;
+		var hum1_y = (-(humidities[counter]+minHum))*pixPerCelcius + temperatureRadius + canvasTopBuffer;
 		context.beginPath();
 	 	context.arc(hum1_x,hum1_y,temperatureRadius,0,2*Math.PI);
 	 	context.fillText(humidities[counter] + "%",hum1_x ,hum1_y - 10);
@@ -116,21 +105,39 @@ function drawhumidities(humidities){
 	 	context.save();
 		context.fillStyle = "rgb(0,0,0)";
 	 	context.fillText((2+counter*2) + ":00",hum1_x - 10,canvasTopBuffer + canvasHeight+canvasRadiusBuffer+canvasTextBuffer/2);
-
+	 	var nulls = 0;
+	 	var oldHum = humidities[counter];
+	 	data1.push(humidities[counter]);
 		while(isNaN(humidities[++counter]) == true){
-	 		if(counter >= 12) break; 
+	 		if(counter > 11) break; 
+	 		nulls++;
 	 		context.fillText((2+counter*2) + ":00",(canvasWidth/12)*counter + temperatureRadius + 15 - 10,canvasTopBuffer + canvasHeight+canvasRadiusBuffer+canvasTextBuffer/2);
 			
 		};
+
+		var newHum = humidities[counter];
+		var hum2_x = (canvasWidth/12)*counter + temperatureRadius + 15;
+		var hum2_y = (-(humidities[counter]+minHum))*pixPerCelcius + temperatureRadius + canvasTopBuffer;
+			
+			for(var i = 0; i < nulls; i++){
+			context.beginPath();
+			var x = (canvasWidth/12)*(counter - nulls + i) + temperatureRadius + 15;
+			var hum = newHum * ((i+1)/(nulls+1)) + oldHum * ((nulls-i)/(nulls+1));
+			data1.push(hum);
+			var y = (-(hum+minHum))*pixPerCelcius + temperatureRadius + canvasTopBuffer;
+		 	context.arc(x,y,temperatureRadius,0,2*Math.PI);
+		 	context.fillText(hum.toFixed(1) + " deg.",x ,y - 10);
+		 	context.fill();
+		}
 		
 		context.restore();
 
 	 	context.beginPath();
 	 	context.moveTo(hum1_x,hum1_y);
-	 	context.lineTo((canvasWidth/12)*counter + 15,canvasTopBuffer + (-(humidities[counter]-maxHum))*pixPerCelcius + temperatureRadius);
+	 	context.lineTo((canvasWidth/12)*counter + 15,canvasTopBuffer + (-(humidities[counter]+minHum))*pixPerCelcius + temperatureRadius);
 	 	context.stroke();
-
-
+	 	console.log(data1);
+	 	return data1;
 	};
 }
 
@@ -209,7 +216,8 @@ $(document).ready(function(){
 									$('#field_24').find('.h_'+i).text(info.hour[i]);
 									$('#field_24').find('.temperature_'+i).text(info.temp[i]);
 									$('#field_24').find('.humidity_'+i).text(info.humidity[i]);
-									$('#field_24').find('.hour_'+i).show('fast');
+									$('.hour_0, .hour_1, .hour_2, .hour_3, .hour_4').find('.hour_'+i).show('fast');
+									$('.hidden_fields1, .hidden_fields2').hide("fast");
 							
 							}else{
 							
@@ -325,12 +333,100 @@ $(document).ready(function(){
 						console.log(info);
 						$('#tempgraph').show("fast");
 						$('#humgraph').show("fast");
-						temps=info.temp;
+						tempers=info.temp;
 						humidities=info.humidity;
-						for(var i = 0; i < temps.length;i++){
-							temps[i] = parseInt(temps[i]);
+						var hours=info.hour;
+						console.log("array hours:"+hours);
+						console.log("array temps json:"+info.temp);
+						for(var i = 0; i < tempers.length;i++){
+							tempers[i] = parseInt(tempers[i]);
 							humidities[i] = parseInt(humidities[i]);
 						}
+						var temps=[NaN,NaN, NaN, NaN, NaN,NaN, NaN, NaN,NaN,NaN,NaN,NaN];
+						var hums=[NaN,NaN, NaN, NaN, NaN,NaN, NaN, NaN,NaN,NaN,NaN,NaN];
+						console.log("info humidities:"+humidities)
+						for(var k=0; k<info.hour.length;){
+						//console.log(k);
+						switch(parseInt(hours[k]))
+							{
+							case 2:
+							console.log(info.hour[k]);
+							  temps[0]=info.temp[k];
+							  console.log("temp0:"+temps[0]);
+							  hums[0]=info.humidity[k];
+							  //k++;
+							  break;
+							case 4:
+							  temps[1]=info.temp[k];
+							  console.log(info.hour[k]);
+							  console.log("temp1:"+temps[1]);
+							  hums[1]=info.humidity[k];
+							  //k++;
+							  break;
+							case 6:
+							console.log(info.hour[k]);
+							 temps[2]=info.temp[k];
+							 console.log("temp2:"+temps[2]);
+							 hums[2]=info.humidity[k];
+							 //k++;
+							  break;
+							case 8:
+							  temps[3]=info.temp[k];
+							  console.log("temp3:"+temps[3]);
+							  hums[3]=info.humidity[k];
+							 // k++;
+							  break;
+							 case 10:
+							  temps[4]=info.temp[k];
+							  console.log("temp4 :"+temps[4]);
+							  hums[4]=info.humidity[k];
+							  //k++;
+							 break;
+							 case 12:
+							  temps[5]=info.temp[k];
+							  console.log("temp5 :"+temps[5]);
+							  hums[5]=info.humidity[k];
+							 // k++;
+							 break;
+							 case 14:
+							  temps[6]=info.temp[k];
+							  hums[6]=info.humidity[k];
+							 // k++;
+							 break;
+							 case 16:
+							  temps[7]=info.temp[k];
+							  hums[7]=info.humidity[k];
+							  //k++;
+							 break;
+							 case 18:
+							  temps[8]=info.temp[k];
+							  hums[8]=info.humidity[k];
+							 // k++;
+							 break;
+							 case 20:
+							  temps[9]=info.temp[k];
+							  hums[9]=info.humidity[k];
+							 // k++;
+							 break;
+							 case 22:
+							  temps[10]=info.temp[k];
+							  hums[10]=info.humidity[k];
+							  //k++;
+							 break;
+							  case 24:
+							  temps[11]=info.temp[k];
+							  hums[11]=info.humidity[k];
+							 // k++;
+							 break;
+							}
+							k++;
+					}
+							console.log("Array temps end if switch:"+temps);
+							console.log("Array hums end if switch:"+hums);
+							console.log(k);
+							
+						//var array_temp=new Array();
+
 						var data1 = {
 							labels : ["2:00","4:00","6:00","8:00","10:00","12:00","14:00","16:00","18:00","20:00","22:00","24:00"],
 							datasets : [
@@ -353,7 +449,7 @@ $(document).ready(function(){
 									strokeColor : "rgba(220,220,220,1)",
 									pointColor : "rgba(220,220,220,1)",
 									pointStrokeColor : "#fff",
-									data : humidities
+									data : hums
 								},
 								
 							]
