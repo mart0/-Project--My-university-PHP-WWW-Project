@@ -111,6 +111,7 @@ $(document).ready(function () {
     		$('#del_employee').hide("fast");
     		$('#edit_employee').hide("fast");
     		$('#del_location').show("slow");
+
         });
         $('#del_emp').click(function() {
     		$('#location_form').hide("fast");
@@ -119,6 +120,11 @@ $(document).ready(function () {
     		$('#del_location').hide("fast");
     		$('#edit_employee').hide("fast");
     		$('#del_employee').show("slow");
+
+        });
+        $('#del_empl').click(function() {
+        $('#dialog').dialog('open').html().html();
+
         });
         $('#edit').click(function() {
     		$('#location_form').hide("fast");

@@ -155,8 +155,10 @@ var data1 = new Array();
 				$('#tempgraph').hide("fast");
 				$('#humgraph').hide("fast");
 				$('#fiveday_chart').hide('fast');
+				$('#field_10days').hide("fast");
 				$('#field_3day').hide("fast");
 				$('#threeday_chart').hide('fast');
+
 				$.ajax({
 					type: "GET",
 					url: 'http://localhost/Weather%20Center/load_info.php?id='+$id,
@@ -215,7 +217,9 @@ var data1 = new Array();
 				$('#tempgraph').hide("fast");
 				$('#humgraph').hide("fast");
 				$('#fiveday_chart').hide('fast');
+				$('#field_10days').hide("fast");
 				$('#field_3day').hide("fast");
+
 				$.ajax({
 					type: "GET",
 					url: 'http://localhost/Weather%20Center/load_info_24hours.php?id='+$id,
@@ -384,8 +388,10 @@ var data1 = new Array();
 				$('#field_24').hide("fast");
 				$('#tempgraph').hide("fast");
 				$('#humgraph').hide("fast");
+				$('#field_10days').hide("fast");
 				$('#field_3day').hide("fast");
 				$('#threeday_chart').hide('fast');
+
 
 				$.ajax({
 					type: "GET",
@@ -466,15 +472,19 @@ var data1 = new Array();
 				});
 			});
 
+
 				$('#3_days').on('click',function(){
+
 				var $id = $('#location').children(":selected").attr("id");
 				console.log($id);
 				$('#result').hide("fast");
 				$('#field_24').hide("fast");
 				$('#tempgraph').hide("fast");
 				$('#humgraph').hide("fast");
+				$('#result').hide("fast");
 				$('#field_5day').hide("fast");
 				$('#fiveday_chart').hide('fast');
+
 				$.ajax({
 					type: "GET",
 					url: 'http://localhost/Weather%20Center/load_info_3days.php?id='+$id,
@@ -487,8 +497,9 @@ var data1 = new Array();
 						var image=info.responseJSON.image;
 						console.log(dates);
 						
+
 						$('#field_3day').show("fast");
-						console.log(dates[2]);
+
 
 						if(dates!=null){
 							for(var i=0;i<dates.length;i++){
@@ -498,7 +509,7 @@ var data1 = new Array();
 									switch(img)
 									{
 									case 1:
-									  $('#field_3day').find('#day_date_'+i).find('.image').attr("src","images/sunny.png");
+							 		 $('#field_3day').find('#day_date_'+i).find('.image').attr("src","images/sunny.png");
 									  break;
 									case 2:
 									  $('#field_3day').find('#day_date_'+i).find('.image').attr("src","images/cloudy.png");
@@ -512,11 +523,13 @@ var data1 = new Array();
 								 	$('#field_3day').find('.humidity_'+i).text(humidities[i]);
 							 	}else{
 							 		$('#field_3day').find('.date_'+i).closest('.day_date').hide("fast");
+
 									// $('#field_5day').find('.temperature_'+i).hide("fast");
 								 // 	$('#field_5day').find('.humidity_'+i).hide("fast");
 							 	}
 							}
 						}else{
+
 							for(var i=0;i<3;i++){
 								$('#field_3day').find('.date_'+i).text("no info");
 								$('#field_3day').find('.temperature_'+i).text("no info");
@@ -524,6 +537,7 @@ var data1 = new Array();
 							}
 						}
 						var ctx = $("#threeday_chart").get(0).getContext("2d");
+
 						var my5DayChart = new Chart(ctx);
 						var data = {
 							labels : dates,
@@ -549,6 +563,95 @@ var data1 = new Array();
 						}
 						new Chart(ctx).Line(data,options);
 						$('#threeday_chart').show('fast');
+
+					}
+					
+				});
+			});
+			
+			$('#10_days').on('click',function(){
+				var $id = $('#location').children(":selected").attr("id");
+				console.log($id);
+				$('#result').hide("fast");
+				$('#field_24').hide("fast");
+				$('#tempgraph').hide("fast");
+				$('#field_5day').hide("fast");
+				$('#humgraph').hide("fast");
+				$('#field_3day').hide("fast");
+				$.ajax({
+					type: "GET",
+					url: 'http://localhost/Weather%20Center/load_info_10days.php?id='+$id,
+					dataType: 'json',
+					complete: function(info){
+						//$json = JSON.parse (info);/ / Convert the JSON format input
+						var dates = info.responseJSON.date;
+						var temps = info.responseJSON.temp;
+						var humidities = info.responseJSON.humidity;
+						var image=info.responseJSON.image;
+						console.log(dates);
+						
+						$('#field_10days').show("fast");
+						console.log(dates);
+
+						if(dates!=null){
+							for(var i=0;i<dates.length;i++){
+								if(dates[i]!=0 && temps[i]!=0 && humidities[i]!=0 && image[i]!=0){
+									var img=parseInt(image[i]);
+									console.log(img);
+									switch(img)
+									{
+									case 1:
+									  $('#field_10days').find('#day_date_'+i).find('.image').attr("src","images/sunny.png");
+									  break;
+									case 2:
+									  $('#field_10days').find('#day_date_'+i).find('.image').attr("src","images/cloudy.png");
+									  break;
+									  case 3:
+									  $('#field_10days').find('#day_date_'+i).find('.image').attr("src","images/rainy.png");
+									  break;
+									}
+									$('#field_10days').find('.date_'+i).text(dates[i]);
+									$('#field_10days').find('.temperature_'+i).text(temps[i]);
+								 	$('#field_10days').find('.humidity_'+i).text(humidities[i]);
+							 	}else{
+							 		$('#field_10days').find('.date_'+i).closest('.day_date').hide("fast");
+									// $('#field_5day').find('.temperature_'+i).hide("fast");
+								 // 	$('#field_5day').find('.humidity_'+i).hide("fast");
+							 	}
+							}
+						}else{
+							for(var i=0;i<10;i++){
+								$('#field_10days').find('.date_'+i).text("no info");
+								$('#field_10days').find('.temperature_'+i).text("no info");
+								$('#field_10days').find('.humidity_'+i).text("no info");
+							}
+						}
+						var ctx = $("#fiveday_chart").get(0).getContext("2d");
+						var my5DayChart = new Chart(ctx);
+						var data = {
+							labels : dates,
+							datasets : [
+								{
+						
+									fillColor : "rgba(240,0,0,0.5)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : drawtemps(temps)
+								},
+							
+								{
+									fillColor : "rgba(0,50,240,0.5)",
+									strokeColor : "rgba(220,220,220,1)",
+									pointColor : "rgba(220,220,220,1)",
+									pointStrokeColor : "#fff",
+									data : drawhumidities(humidities)
+								},
+								
+							]
+						}
+						new Chart(ctx).Line(data,options);
+						$('#fiveday_chart').show('fast');
 					}
 					
 				});
@@ -560,8 +663,10 @@ var data1 = new Array();
 				$('#field_5day').hide("fast");
 				$('#field_24').hide("fast");
 				$('#fiveday_chart').hide('fast');
+				$('#field_10days').hide("fast");
 				$('#threeday_chart').hide('fast');
-				
+				$('#field_3day').hide("fast");
+	
 				var id = $('#location').children(":selected").attr("id");
 				var temps=new Array();
 				var humidities=new Array();

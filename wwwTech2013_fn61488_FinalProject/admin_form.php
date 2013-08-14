@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
-	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<title>dalipiche.com</title>
 	<link rel="stylesheet" type="text/css" href="weather.css">
 	<link rel="stylesheet" type="text/css" href="admin_form.css">
@@ -77,21 +77,25 @@
 					<!-- Add Employee FORM -->
 					<div>
 						<form class="enter_data" id="employee_form" action="" method="post" onsubmit="return false;" >
-							<label for="user_name">User Name&nbsp;&nbsp;&nbsp;</label> 
-							<input type="text" id="user_name" name="user_name" placeholder="enter employee's name here" > <br> <br>
-							<label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
-							<input type="password" id="password" name="password" > <br> <br>
-							<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-							<input type="text" id="name" name="name" placeholder="first name and last name" >  <br> <br>
-							<label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-							<input type="email" id="email" name="email" required placeholder="something@gmail.com"> <br> <br>
-							<button type="submit" id="admin_submit">Save</button>
+						
+						<label for="user_name">User Name&nbsp;&nbsp;&nbsp;</label> 
+						<input type="text" id="user_name" name="user_name" placeholder="enter employee's name here" >
+						
+			
+						
+						<label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label> 
+						<input type="password" id="password" name="password" > <br>
+						<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input type="text" id="name" name="name" placeholder="first name and last name" > <br>
+						<label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input type="email" id="email" name="email" required placeholder="something@gmail.com"> <br>
+						<button type="submit" id="admin_submit">Save</button>
 						</form>
 						<!-- Add Location FORM -->
 						<form class="enter_data" id="location_form" action="" method="post" onsubmit="return false;">
-							<label for="location">Location</label>
+						<label for="location">Location</label>
 							<input type="text" id="location" name="location" placeholder="Sofia">
-							<button type="submit" id="loc_submit">Save</button>
+						<button type="submit" id="loc_submit">Save</button>
 						</form>
 						
 						<!-- Assign Task Form -->
@@ -112,9 +116,8 @@
 							    
 								} 
 								echo "</select>";?>
-								<br>
-								<br>
-									
+
+								<br/><br/>	
 							<label for="employees">Employees</label>
 								<?php 
 								$query="SELECT id_emp, user_emp_name
@@ -130,21 +133,16 @@
 								 echo '<option value='."$row[0]|$row[1]".'>'. $row[1].'</option>'; 
 							    
 								}
-								echo "</select>";?>
-								<br>
-								<br>
+								echo "</select>";?><br/><br/>
 							<label for="start_date">Start date</label>
-							<input type="date" id="start_date" name="start_date">
-							<br>
-							<br>
+							<input type="date" id="start_date" name="start_date"><br/><br/>
 							<label for="final_date">Final date</label>
 							<input type="date" id="final_date" name="final_date">
-							<br>
 							<button type="submit" id="assing_submit">Save</button>
 						</form>
 						<!-- Delete Location Form -->
 						<form action="delete_location.php" id="del_location" method="post" >
-						<label for="location">Location</label> <br>
+						<label for="location">Location</label>
 						<button id="del_loc">Delete</button>
 							<?php 
 							$query="SELECT id_location, location_name
@@ -162,11 +160,10 @@
 								} 
 								echo "</select>";?>
 								
-						</form>
+						</form><br/>
 						<!-- Delete Employee Form -->
 						<form action="delete_employee.php" id="del_employee" method="post" >
-							<label for="employees">Employees</label> <br>
-							<button type="submit" id="del_empl">Delete</button>
+							<label for="employees">Employees</label>
 								<?php 
 								$query="SELECT id_emp, user_emp_name
 						                FROM employee";
@@ -183,12 +180,12 @@
 								}
 								echo "</select>";?>
 							
-						
-						</form>
+						<button type="submit" id="del_emp">Delete</button>
+						</form><br/>
 						
 						<!-- Edit Form -->
 						<form class="edit_data" id="edit_employee" action="edit_employee.php" method="post" >
-							<label for="employees">Employees</label> 
+							<label for="employees">Employees</label>
 								<?php 
 								$query="SELECT id_emp, user_emp_name
 						                FROM employee";
@@ -204,19 +201,15 @@
 							    
 								}
 								echo "</select>";?>
-						
-							 <br> <br>
-							<label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-							<input type="password" id="password" name="password" > <br> <br>
-							<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-							<input type="text" id="name" name="name" placeholder="first name and last name" > <br> <br>
-							<label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-							<input type="email" id="email" name="email" required placeholder="something@gmail.com" > <br><br>
-							<button type="submit" id="edit_emp">Edit</button>
-							<div id="dialog" style="display: none">
-								<p>Employee deleted</p>
-							</div>
-
+						</label>
+						 <br>
+						<label for="password">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+						<input type="password" id="password" name="password" > <br>
+						<label for="name">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+						<input type="text" id="name" name="name" placeholder="first name and last name" > <br>
+						<label for="email">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input type="email" id="email" name="email" required placeholder="something@gmail.com" > <br>
+						<button type="submit" id="edit_emp">Edit</button>
 						</form>
 						</div>
 					</div>
@@ -226,9 +219,133 @@
 		 	<footer>
 		 		<p>Designed by <a href="http://martomarinov.wordpress.com/">Martin Marinov</a> and <a href="http://bg.linkedin.com/pub/gergana-atanasova/72/2b4/165/">Gergana Atanasova</a>, Copyright &#169; 2013. All rights reserved.</p>
 			</footer>
-	</div> 
+	</div>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script> 
 	<script type="text/javascript" src="ajax_session.js"></script>
-	<script type="text/javascript" src="admin_form.js"></script>
+<script>
+	$(document).ready(function () {
+		
+
+    	$('#add_emp').click(function() {
+    		$('#location_form').hide("fast");
+    		$('#assign_form').hide("fast");
+    		$('#del_location').hide("fast");
+    		$('#del_employee').hide("fast");
+    		$('#edit_employee').hide("fast");
+    		$('#employee_form').show("slow");
+
+        });
+    	$('#admin_submit').click(function() {
+
+    			$.ajax({
+				    type: "POST",
+				    url: "form_employee.php",
+				    data: $("#employee_form").serialize(),
+				    success: function(data){
+				    	console.log(data);
+				    	$('#warning').show('fast');
+				    	$('#warning').text("Proccesing...");
+				    	if(data==true){
+				    		$('#warning').text("Yep success");
+				    	}else{
+
+				    		$('#warning').text("Ooh no can not insert data or this user name allready exist");
+				    	}
+				    }
+				 });
+
+    	});
+
+        
+        $('#add_loc').click(function() {
+        	$('#employee_form').hide("fast");
+    		$('#assign_form').hide("fast");
+    		$('#del_location').hide("fast");
+    		$('#del_employee').hide("fast");
+    		$('#edit_employee').hide("fast");
+        	$("#location_form").show("slow").css("display","inline-block","float","right");
+    	});
+
+        $('#loc_submit').click(function() {
+
+    			$.ajax({
+				    type: "POST",
+				    url: "form_location.php",
+				    data: $("#form_location").serialize(),
+				    success: function(data){
+				    	console.log(data);
+				    	$('#warning').show('fast');
+				    	$('#warning').text("Proccesing...");
+				    	if(data==true){
+				    		$('#warning').text("Yep success");
+				    	}else{
+
+				    		$('#warning').text("Ooh no can not assign this location to this employee");
+				    	}
+				    }
+				 });
+
+    	});
+    	
+        
+
+    	$('#assign').click(function() {
+    		$('#location_form').hide("fast");
+    		$('#employee_form').hide("fast");
+    		$('#del_location').hide("fast");
+    		$('#del_employee').hide("fast");
+    		$('#edit_employee').hide("fast");
+    		$('#assign_form').show("slow");
+        });
+
+    	$('#assing_submit').click(function() {
+
+    			$.ajax({
+				    type: "POST",
+				    url: "assign_form.php",
+				    data: $("#assign_form").serialize(),
+				    success: function(data){
+				    	console.log(data);
+				    	$('#warning').show('fast');
+				    	$('#warning').text("Proccesing...");
+				    	if(data==true){
+				    		$('#warning').text("Yep success");
+				    	}else{
+
+				    		$('#warning').text("Ooh no can not assign this location to this employee");
+				    	}
+				    }
+				 });
+
+    	});
+    	
+
+        $('#del_loc').click(function() {
+    		$('#location_form').hide("fast");
+    		$('#employee_form').hide("fast");
+    		$('#assign_form').hide("fast");
+    		$('#del_employee').hide("fast");
+    		$('#edit_employee').hide("fast");
+    		$('#del_location').show("slow");
+        });
+        $('#del_emp').click(function() {
+    		$('#location_form').hide("fast");
+    		$('#employee_form').hide("fast");
+    		$('#assign_form').hide("fast");
+    		$('#del_location').hide("fast");
+    		$('#edit_employee').hide("fast");
+    		$('#del_employee').show("slow");
+        });
+        $('#edit').click(function() {
+    		$('#location_form').hide("fast");
+    		$('#employee_form').hide("fast");
+    		$('#assign_form').hide("fast");
+    		$('#del_location').hide("fast");
+    		$('#del_employee').hide("fast");
+    		$('#edit_employee').show("slow");
+        });
+	}); 
+</script> 
 </body>
 </html>
 

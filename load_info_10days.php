@@ -33,10 +33,10 @@ if(!empty($_GET)){
 				 exit;
 		}
 
-	$json=array('date'      => array(0 => 0 ,1 => 0, 2=> 0,3 => 0,4 => 0), 
-				'temp' 		=> array(0 => 0 ,1 => 0, 2=> 0,3 => 0,4 => 0 ),
-				'humidity'  => array(0 => 0 ,1 => 0, 2=> 0,3 => 0,4 => 0 ),
-				'image' 	=> array(0 => 0 ,1 => 0, 2=> 0,3 => 0,4 => 0 ));
+	$json=array('date'      => array(0 => 0 ,1 => 0, 2=> 0,3 => 0,4 => 0,5 =>0,6=>0,7=>0,8=>0,9=>0), 
+				'temp' 		=> array(0 => 0 ,1 => 0, 2=> 0,3 => 0,4 => 0,5 =>0,6=>0,7=>0,8=>0,9=>0),
+				'humidity'  => array(0 => 0 ,1 => 0, 2=> 0,3 => 0,4 => 0,5 =>0,6=>0,7=>0,8=>0,9=>0),
+				'image' 	=> array(0 => 0 ,1 => 0, 2=> 0,3 => 0,4 => 0,5 =>0,6=>0,7=>0,8=>0,9=>0));
 
 	
 	$rows = array();
@@ -59,7 +59,7 @@ if(!empty($_GET)){
 	$i=1;
 	$date=$row[$i]['day_date'];
 	//var_dump($date);
-	while($date<=$today && $i<5){
+	while($date<=$today && $i<10){
 		//var_dump($i);
 		//var_dump($c);
 		$date=$row[$i]['day_date'];
@@ -69,7 +69,7 @@ if(!empty($_GET)){
 	}
 	$p=$i;
 	$k=1;
-	while($k<5){
+	while($k<10){
 		if(($date=$row[$p]['day_date'])!=null){
 		//var_dump($date);
 		if( $date <= $final_date){

@@ -4,22 +4,21 @@ body, div, ul, li , a {
 }
 
 body {
-	height: auto;
-	background-image: url("images/bg.jpg");
-	background-position: center;
-	background-repeat:  no-repeat ; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	font-family: Arial, Verdana, Serif;
+	  background-image: url("images/bg.jpg");
+	  background-position: center;
+	  background-repeat:  no-repeat ; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  font-family: Arial, Verdana, Serif;
 }
 #wrapper {
 	margin: 50px auto;
 	width: 960px;
 	background: transparent;
 }
-#options {
+#options{
 	padding: 10px;
 	font-size: 20px;
 	color: #000;
@@ -85,20 +84,34 @@ nav li:hover, #options li:hover {
 /*------------ Actual content--------------*/
 #wrapper-content {
 	width:960px;
-	height:auto;
+	height:550px;
 }
 section {
 	width: 960px;
-	height: 900px;
+	height: 500px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	background-color: rgba(255,255,255,0.7);
 	border-right: #f5f5f5 1px solid ;
 }
 
+aside {
+	width: 300px;
+	height: 500px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: rgba(230,230,250,0.7);
+}
 
+.aside_header {
+	margin:10px 0  ;
+	padding: 10px;
+	font-size: 20px;
+	background-color: #FFFFF5;
+	text-align: center;
+}
 
-.weather_info {
+.weather_info{
 	background-color: rgba(255,255,255,0.7);
 	width: 300px;
 	margin:30px auto;
@@ -122,23 +135,13 @@ section {
 }
 
 #result {
-	width: 400px;
-	height: auto;
 	background-color: rgba(255,255,255,0.5);
 	font-size: 20px;
     margin: 30px auto;
     padding: 30px;
+    width: 180px;
 	display: none;
 
-}
-
-#result img {
-	width: 200px;
-	height: 200px;
-	float:left;
-}
-#result label, span{
-	float: right;
 }
 .hour_data{
 	background-color: rgba(255,255,255,0.7);
@@ -191,54 +194,25 @@ section {
     display: none;
 }
 
-
-#field_24, #field_5day, #field_3day ,#field_10days{
-    height: 433px;
-
+#field_24, #field_5day {
+    height: 343px;
+    
+ 
     margin-top: 30px;
     display: inline;
     display: none;
 }
 
-#field_10days div{
-	width: 150px;
-	padding: 15px;
-	display: inline-table;
-
-}
-#day_date_0,#day_date_1,#day_date_2,#day_date_3,#day_date_4 {
+.day_date{
 	width:150px;
 	padding: 12px;
 	display: inline-block;
-	
+	border: 1px dashed #000;
 }
-
-#day_date_0,#day_date_1,#day_date_2,#day_date_3,#day_date_4 img{
-    margin-left:10px;
-    
-}
-.forward, .forward1 {
+.forward,.forward1{
 width:50px;
 height:50px;
-float: right;
-margin-top: -30px;
 background: url("images/forward.png") no-repeat scroll 0 0 transparent;
-}
-
-.back, .back1 {
-width:50px;
-height:50px;
-float: left;
-margin-top: -30px;
-background: url("images/back.png") no-repeat scroll 0 0 transparent;
-}
-
-.back {
-    margin-top:-260px;
-}
-
-.forward {
-    margin-top:-260px;
 }
 
 .date_new, .temperature_new, .humidity_new, .hour_new {
@@ -250,51 +224,61 @@ background: url("images/back.png") no-repeat scroll 0 0 transparent;
 	float: right;
 }
 
+
+ 
 p {
  	font-size: 30px;
  	margin-left: 60px;
  }
 
- .hour_0, .hour_1, .hour_2, .hour_3, .hour_4, .hidden_fields1, .hidden_fields2 {
+ .hour_1, .hour_2, .hour_3, .hour_4, .hour_5, .hidden_fields1, .hidden_fields2 {
  	display: table-cell;
- 	width: 150px;
+ 	width:150px;
  	padding: 30px ;
  	border-left: 1px dotted gray;
  	border-right: 1px dotted gray;
  }
 
-/*.hidden_fields1, .hidden_fields2 {
- 	display: none;
- }*/
 
-#tempgraph, #humgraph, #fiveday_chart, #threeday_chart{
-	width:800px !important;
-	height: 260px !important;
-	font-size: 12px !important;
-	display: none;
+ .hidden_fields1, .hidden_fields2 {
+ 	display: none;
+ }
+
+.forward {
+	float: right;
+	margin-top: -109px;
 }
 
+.forward1 {
+	float: right;
+	margin-top: -109px;
+}
+
+.back {
+ 	float: left;
+ 	margin-top: -109px;
+}
+
+.back1 {
+ 	float: left;
+ 	margin-top: -109px;
+}
 
 
 /*------------ Footer --------------*/
 footer {
 	width: 960px;
 	height: 45px;
-	
-	
-	/*margin-top: 210px;*/
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 0 0 10px 10px;
+	margin-top: 40px;
 }
 
 footer p {
-	width: 960px;
-	height: 45px;
-	background-color: rgba(255,255,255,0.7);
-	border-radius: 0 0 10px 10px;
 	font-size: 17px;
 	font-family: Arial, Verdana;
 	margin: 10px;
 	float: left;
-
 }
 
 footer a {
